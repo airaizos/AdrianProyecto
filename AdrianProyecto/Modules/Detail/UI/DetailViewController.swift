@@ -18,10 +18,8 @@ class DetailViewController: UIViewController {
 
 }
 
-
 extension DetailViewController {
     static func createFromStoryboard() -> DetailViewController {
         return UIStoryboard(name: "DetailViewController", bundle: .main).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
     }
-    
 }

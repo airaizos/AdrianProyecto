@@ -21,6 +21,9 @@
 		3A4697E227A49F8500BBADC0 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697E127A49F8500BBADC0 /* FormViewController.swift */; };
 		3A4697E527A49FE600BBADC0 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4697E427A49FE600BBADC0 /* DetailViewController.storyboard */; };
 		3A4697E927A4A0CF00BBADC0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697E827A4A0CF00BBADC0 /* DetailViewController.swift */; };
+		3A4697EB27A4A1BD00BBADC0 /* FormControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697EA27A4A1BD00BBADC0 /* FormControllerBuilder.swift */; };
+		3A4697ED27A4A1CE00BBADC0 /* ListControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697EC27A4A1CE00BBADC0 /* ListControllerBuilder.swift */; };
+		3A4697EF27A4A1F000BBADC0 /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697EE27A4A1F000BBADC0 /* DetailControllerBuilder.swift */; };
 		DDFF5BED73CC91B979720392 /* Pods_AdrianProyecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F33FA3712FB338015CDB9C9 /* Pods_AdrianProyecto.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		3A4697E127A49F8500BBADC0 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		3A4697E427A49FE600BBADC0 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		3A4697E827A4A0CF00BBADC0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3A4697EA27A4A1BD00BBADC0 /* FormControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormControllerBuilder.swift; sourceTree = "<group>"; };
+		3A4697EC27A4A1CE00BBADC0 /* ListControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerBuilder.swift; sourceTree = "<group>"; };
+		3A4697EE27A4A1F000BBADC0 /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
 		939B0D795A867BF4381ACDE2 /* Pods-AdrianProyecto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdrianProyecto.debug.xcconfig"; path = "Target Support Files/Pods-AdrianProyecto/Pods-AdrianProyecto.debug.xcconfig"; sourceTree = "<group>"; };
 		9F33FA3712FB338015CDB9C9 /* Pods_AdrianProyecto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdrianProyecto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2A8E297B3714E3AD873179 /* Pods-AdrianProyecto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdrianProyecto.release.xcconfig"; path = "Target Support Files/Pods-AdrianProyecto/Pods-AdrianProyecto.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,8 +112,8 @@
 		3A4697D427A49DCD00BBADC0 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				3A4697E427A49FE600BBADC0 /* DetailViewController.storyboard */,
-				3A4697E827A4A0CF00BBADC0 /* DetailViewController.swift */,
+				3A4697F027A4A1F500BBADC0 /* UI */,
+				3A4697EE27A4A1F000BBADC0 /* DetailControllerBuilder.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4697DD27A49EF500BBADC0 /* UI */,
+				3A4697EC27A4A1CE00BBADC0 /* ListControllerBuilder.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4697DE27A49F3400BBADC0 /* UI */,
+				3A4697EA27A4A1BD00BBADC0 /* FormControllerBuilder.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -131,8 +139,8 @@
 		3A4697DD27A49EF500BBADC0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3A4697DB27A49EE800BBADC0 /* ListViewController.swift */,
 				3A4697D927A49ED200BBADC0 /* ListViewController.storyboard */,
+				3A4697DB27A49EE800BBADC0 /* ListViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -142,6 +150,15 @@
 			children = (
 				3A4697DF27A49F7800BBADC0 /* FormViewController.storyboard */,
 				3A4697E127A49F8500BBADC0 /* FormViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A4697F027A4A1F500BBADC0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A4697E427A49FE600BBADC0 /* DetailViewController.storyboard */,
+				3A4697E827A4A0CF00BBADC0 /* DetailViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -284,9 +301,12 @@
 				3A16455627A49A7500D8369C /* ViewController.swift in Sources */,
 				3A16455227A49A7500D8369C /* AppDelegate.swift in Sources */,
 				3A4697E227A49F8500BBADC0 /* FormViewController.swift in Sources */,
+				3A4697ED27A4A1CE00BBADC0 /* ListControllerBuilder.swift in Sources */,
 				3A4697DC27A49EE800BBADC0 /* ListViewController.swift in Sources */,
 				3A16455427A49A7500D8369C /* SceneDelegate.swift in Sources */,
+				3A4697EB27A4A1BD00BBADC0 /* FormControllerBuilder.swift in Sources */,
 				3A16455C27A49A7500D8369C /* AdrianProyecto.xcdatamodeld in Sources */,
+				3A4697EF27A4A1F000BBADC0 /* DetailControllerBuilder.swift in Sources */,
 				3A4697D827A49EB800BBADC0 /* InitialControllerBuilder.swift in Sources */,
 				3A4697E927A4A0CF00BBADC0 /* DetailViewController.swift in Sources */,
 			);
