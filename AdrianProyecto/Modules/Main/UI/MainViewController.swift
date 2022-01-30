@@ -8,11 +8,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    var presenter: MainPresenterContract?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+        presenter?.viewDidLoad()
     }
     
 

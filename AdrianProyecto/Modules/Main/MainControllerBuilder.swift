@@ -12,6 +12,11 @@ class MainControllerBuilder {
     func build() -> UIViewController {
         let viewController = MainViewController.createFromStoryboard()
         
+        //let fetchRandom = fetchFromAPI()
+        let presenter = MainPresenter()
+        //let interactor = MainInteractor()
+        //let wireframe = MainWireframe()
+        
         
         return viewController
     }

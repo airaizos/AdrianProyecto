@@ -16,4 +16,17 @@ protocol MainViewContract: UIViewController {
 
 protocol MainPresenterContract {
     var view: MainViewContract? { get set }
+    var interactor: MainInteractorContract? { get set }
+    var wireframe: WireframeInteractorContract? { get set }
+    
+    func viewDidLoad()
+}
+
+protocol MainInteractorContract {
+
+}
+
+
+protocol WireframeInteractorContract {
+    
 }
