@@ -16,7 +16,7 @@ class FactProviderFromAPI: MainProviderContract {
             return
         }
         let request = URLRequest(url: url)
-        AF.request(request).responseDecodable { [weak self](response: DataResponse<Fact,AFError>) in
+        AF.request(request).responseDecodable { [weak self] (response: DataResponse<Fact,AFError>) in
             switch response.result {
             case .success(let fact): completion(.success(fact))
             case .failure(let error): completion(.failure(.generic(error)))

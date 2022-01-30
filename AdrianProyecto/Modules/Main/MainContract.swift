@@ -9,16 +9,20 @@ import Foundation
 import UIKit
 
 protocol MainViewContract: UIViewController {
-    var presenter: MainPresenterContract? { get set
-    }
+    var presenter: MainPresenterContract? { get set }
+    func configure(with viewModel: FactViewModel)
+    
 }
 
 protocol MainPresenterContract {
     var view: MainViewContract? { get set }
     var interactor: MainInteractorContract? { get set }
-    var wireframe: WireframeInteractorContract? { get set }
+    var wireframe: MainWireframeContract? { get set }
     
     func viewDidLoad()
+    
+    //19:48 me estoy adelantando?
+  //  func factViewModel() -> FactViewModel
 }
 
 protocol MainInteractorContract {
@@ -26,17 +30,14 @@ protocol MainInteractorContract {
     func fetchItems()
 }
 
-
-protocol WireframeInteractorContract {
-    
+protocol MainWireframeContract {
+    var view: UIViewController? { get set }
 }
 
-
-protocol MainInteractorOutputContract {
+protocol MainInteractorOutputContract: AnyObject {
     func didFetch(fact: Fact)
     func didFetchFail()
 }
-
 
 protocol MainProviderContract {
     func getMainFact(_ completion: @escaping (Result<Fact,MainProviderError>) ->())

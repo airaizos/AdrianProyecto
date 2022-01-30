@@ -12,33 +12,30 @@ struct FactViewModel {
     let value: String
 }
 
-class MainPresenter: MainPresenterContract {
+class MainPresenter: MainPresenterContract, MainInteractorOutputContract {
     
     weak var view: MainViewContract?
     var interactor: MainInteractorContract?
-    var wireframe: WireframeInteractorContract?
+    var wireframe: MainWireframeContract?
+    var fetchFacts: MainProviderContract?
     
-    func factViewModel() -> FactViewModel {
-        let fact = item
-
-        return fact.toMainFactViewModel
-       
-    }
-    
-    private var item:Fact = Fact(iconURL: nil, value: "")
+    private var fact:Fact = Fact(iconURL: URL(string: "urlvacia"), value: "Init vacio")
     
     func viewDidLoad() {
-        interactor?.output = self
-
+        interactor?.output  = self
+        interactor?.fetchItems()
+        view?.configure(with: factViewModel())
     }
-}
-
-extension MainPresenter: MainInteractorOutputContract {
     func didFetch(fact: Fact) {
-        self.item = fact
-    }
+        self.fact = fact
+}
     
+    func factViewModel() -> FactViewModel {
+        let item = fact
+        return item.toMainFactViewModel
+    }
+
     func didFetchFail() {
-        
+        self.fact = Fact(iconURL: URL(string: "error"), value: "error")
     }
 }

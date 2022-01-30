@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, MainViewContract {
     
     var presenter: MainPresenterContract?
     
@@ -18,9 +18,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
             self.presenter?.viewDidLoad()
-        }
     }
     
     func configure(with viewModel: FactViewModel) {

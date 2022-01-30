@@ -17,6 +17,7 @@
 		3A4664AF27A6C44F0042AA93 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664AE27A6C44F0042AA93 /* MainInteractor.swift */; };
 		3A4664B227A6C78C0042AA93 /* MainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B127A6C78C0042AA93 /* MainProvider.swift */; };
 		3A4664B527A6C82B0042AA93 /* MainProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B427A6C82B0042AA93 /* MainProviderError.swift */; };
+		3A4664B727A6FFB10042AA93 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B627A6FFB10042AA93 /* MainWireframe.swift */; };
 		3A4697D827A49EB800BBADC0 /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697D727A49EB800BBADC0 /* InitialControllerBuilder.swift */; };
 		3A4697DA27A49ED200BBADC0 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4697D927A49ED200BBADC0 /* ListViewController.storyboard */; };
 		3A4697DC27A49EE800BBADC0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697DB27A49EE800BBADC0 /* ListViewController.swift */; };
@@ -49,6 +50,7 @@
 		3A4664AE27A6C44F0042AA93 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		3A4664B127A6C78C0042AA93 /* MainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProvider.swift; sourceTree = "<group>"; };
 		3A4664B427A6C82B0042AA93 /* MainProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProviderError.swift; sourceTree = "<group>"; };
+		3A4664B627A6FFB10042AA93 /* MainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
 		3A4697D727A49EB800BBADC0 /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = "<group>"; };
 		3A4697D927A49ED200BBADC0 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		3A4697DB27A49EE800BBADC0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		3A4664AA27A6BFCF0042AA93 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				3A4664B627A6FFB10042AA93 /* MainWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				3A4697EB27A4A1BD00BBADC0 /* FormControllerBuilder.swift in Sources */,
 				3A16455C27A49A7500D8369C /* AdrianProyecto.xcdatamodeld in Sources */,
 				3A4697EF27A4A1F000BBADC0 /* DetailControllerBuilder.swift in Sources */,
+				3A4664B727A6FFB10042AA93 /* MainWireframe.swift in Sources */,
 				3A4664B227A6C78C0042AA93 /* MainProvider.swift in Sources */,
 				3A4697D827A49EB800BBADC0 /* InitialControllerBuilder.swift in Sources */,
 				3A4697FB27A4A99000BBADC0 /* Fact.swift in Sources */,

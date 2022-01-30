@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 
 class MainInteractor: MainInteractorContract {
-    var output: MainInteractorOutputContract?
+    weak var output: MainInteractorOutputContract?
     var mainProvider: MainProviderContract?
  
     func fetchItems() {
+        print("interactor")
         mainProvider?.getMainFact({ result in
             switch result {
             case .success(let fact): self.output?.didFetch(fact: fact)
@@ -20,5 +21,4 @@ class MainInteractor: MainInteractorContract {
             }
         })
     }
-    
 }
