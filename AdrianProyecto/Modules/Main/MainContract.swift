@@ -11,7 +11,7 @@ import UIKit
 protocol MainViewContract: UIViewController {
     var presenter: MainPresenterContract? { get set }
     func configure(with viewModel: FactViewModel)
-    
+   
 }
 
 protocol MainPresenterContract {
@@ -22,7 +22,7 @@ protocol MainPresenterContract {
     func viewDidLoad()
     
     //19:48 me estoy adelantando?
-  //  func factViewModel() -> FactViewModel
+ func factViewModel() -> FactViewModel
 }
 
 protocol MainInteractorContract {

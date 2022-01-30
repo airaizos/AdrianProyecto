@@ -9,8 +9,9 @@ import UIKit
 import Kingfisher
 
 class MainViewController: UIViewController, MainViewContract {
-    
+
     var presenter: MainPresenterContract?
+
     
     @IBOutlet weak var factImage: UIImageView!
     @IBOutlet weak var factTitle: UILabel!

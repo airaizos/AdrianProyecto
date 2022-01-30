@@ -19,20 +19,23 @@ class MainPresenter: MainPresenterContract, MainInteractorOutputContract {
     var wireframe: MainWireframeContract?
     var fetchFacts: MainProviderContract?
     
-    private var fact:Fact = Fact(iconURL: URL(string: "urlvacia"), value: "Init vacio")
+    var fact:Fact = Fact(iconURL: URL(string: "https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png"), value: "Init vacio")
     
     func viewDidLoad() {
         interactor?.output  = self
         interactor?.fetchItems()
-        view?.configure(with: factViewModel())
+      
     }
     func didFetch(fact: Fact) {
         self.fact = fact
+        //aqui lo tengo los datos del api
+        view?.configure(with: fact.toMainFactViewModel)
 }
     
     func factViewModel() -> FactViewModel {
-        let item = fact
-        return item.toMainFactViewModel
+        fact.toMainFactViewModel
+        //convierte fact a factoviewModel
+        return fact.toMainFactViewModel
     }
 
     func didFetchFail() {
