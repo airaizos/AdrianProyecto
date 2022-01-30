@@ -7,17 +7,38 @@
 
 import Foundation
 
+struct FactViewModel {
+    let iconURL: URL?
+    let value: String
+}
+
 class MainPresenter: MainPresenterContract {
-   
-    var view: MainViewContract?
+    
+    weak var view: MainViewContract?
     var interactor: MainInteractorContract?
     var wireframe: WireframeInteractorContract?
     
-    func viewDidLoad() {
-        
+    func factViewModel() -> FactViewModel {
+        let fact = item
+
+        return fact.toMainFactViewModel
+       
     }
     
-  
+    private var item:Fact = Fact(iconURL: nil, value: "")
     
+    func viewDidLoad() {
+        interactor?.output = self
+
+    }
+}
+
+extension MainPresenter: MainInteractorOutputContract {
+    func didFetch(fact: Fact) {
+        self.item = fact
+    }
     
+    func didFetchFail() {
+        
+    }
 }

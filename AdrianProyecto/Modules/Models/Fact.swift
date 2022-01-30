@@ -8,11 +8,17 @@
 import Foundation
 
 struct Fact: Codable {
-    let iconURL: String
+    let iconURL: URL?
     let value: String
     
     enum CodingKeys: String, CodingKey {
         case iconURL = "icon_url"
         case value
+    }
+}
+
+extension Fact {
+    var toMainFactViewModel: FactViewModel {
+        FactViewModel(iconURL: iconURL, value: value)
     }
 }

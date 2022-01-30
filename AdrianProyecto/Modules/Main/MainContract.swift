@@ -13,7 +13,6 @@ protocol MainViewContract: UIViewController {
     }
 }
 
-
 protocol MainPresenterContract {
     var view: MainViewContract? { get set }
     var interactor: MainInteractorContract? { get set }
@@ -23,10 +22,22 @@ protocol MainPresenterContract {
 }
 
 protocol MainInteractorContract {
-
+    var output: MainInteractorOutputContract? { get set }
+    func fetchItems()
 }
 
 
 protocol WireframeInteractorContract {
     
+}
+
+
+protocol MainInteractorOutputContract {
+    func didFetch(fact: Fact)
+    func didFetchFail()
+}
+
+
+protocol MainProviderContract {
+    func getMainFact(_ completion: @escaping (Result<Fact,MainProviderError>) ->())
 }

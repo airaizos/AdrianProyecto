@@ -15,13 +15,63 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5XV-3t-6oj">
+                                <rect key="frame" x="10" y="44" width="394" height="768"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCn-5Z-5Pf">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="60" id="YFg-gd-vyh"/>
+                                            <constraint firstAttribute="height" constant="60" id="w4h-3L-C29"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuck Norris Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouG-8d-v4X">
+                                        <rect key="frame" x="0.0" y="80" width="394" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Ke5-rw-lpA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-04-kEv">
+                                        <rect key="frame" x="0.0" y="160" width="394" height="608"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Aa6-04-kEv" secondAttribute="trailing" id="rLK-H8-6S1"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nC2-S1-GDx">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="nC2-S1-GDx" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="6EQ-Zo-1GY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5XV-3t-6oj" secondAttribute="bottom" constant="50" id="9OL-Xi-owi"/>
+                            <constraint firstItem="nC2-S1-GDx" firstAttribute="top" secondItem="5XV-3t-6oj" secondAttribute="bottom" id="AGh-iQ-fdV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nC2-S1-GDx" secondAttribute="trailing" id="COe-EX-GAn"/>
+                            <constraint firstItem="5XV-3t-6oj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DAR-pz-d1S"/>
+                            <constraint firstItem="5XV-3t-6oj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="iEl-mz-8gf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5XV-3t-6oj" secondAttribute="trailing" constant="10" id="nR3-6E-byd"/>
+                            <constraint firstItem="nC2-S1-GDx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zrC-TB-qyG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="factImage" destination="eCn-5Z-5Pf" id="D62-vB-3rY"/>
+                        <outlet property="factLabel" destination="Aa6-04-kEv" id="Nzo-bI-FqQ"/>
+                        <outlet property="factTitle" destination="ouG-8d-v4X" id="XQJ-gq-9UQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="84"/>
+            <point key="canvasLocation" x="60.869565217391312" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
