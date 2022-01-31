@@ -21,8 +21,6 @@ protocol MainPresenterContract {
     
     func viewDidLoad()
     
-    //19:48 me estoy adelantando?
- func factViewModel() -> FactViewModel
 }
 
 protocol MainInteractorContract {
@@ -40,5 +38,5 @@ protocol MainInteractorOutputContract: AnyObject {
 }
 
 protocol MainProviderContract {
-    func getMainFact(_ completion: @escaping (Result<Fact,MainProviderError>) ->())
+    func getMainFact(_ completion: @escaping (Result<Fact,ProviderError>) ->())
 }

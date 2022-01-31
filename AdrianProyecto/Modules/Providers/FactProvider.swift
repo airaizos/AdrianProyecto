@@ -8,9 +8,11 @@
 import Foundation
 import Alamofire
 
+//MARK: TODO no da error si url erronea
+
 class FactProviderFromAPI: MainProviderContract {
   
-    func getMainFact(_ completion: @escaping (Result<Fact, MainProviderError>) -> ()) {
+    func getMainFact(_ completion: @escaping (Result<Fact, ProviderError>) -> ()) {
         guard let url = URL(string: "https://api.chucknorris.io/jokes/random") else {
             completion(.failure(.badURL))
             return

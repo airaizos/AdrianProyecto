@@ -16,6 +16,7 @@ class MainViewController: UIViewController, MainViewContract {
     @IBOutlet weak var factImage: UIImageView!
     @IBOutlet weak var factTitle: UILabel!
     @IBOutlet weak var factLabel: UILabel!
+    @IBOutlet weak var RandomFact: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,11 @@ class MainViewController: UIViewController, MainViewContract {
     func configure(with viewModel: FactViewModel) {
         factLabel.text = viewModel.value
         factImage.kf.setImage(with: viewModel.iconURL)
+    }
+    
+    @IBAction func RandomFact(_ sender: UIButton) {
+        
+        //MARK: TODO boton nuego get randomFact, translate
     }
 }
 

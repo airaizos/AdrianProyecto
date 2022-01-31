@@ -31,12 +31,6 @@ class MainPresenter: MainPresenterContract, MainInteractorOutputContract {
         //aqui lo tengo los datos del api
         view?.configure(with: fact.toMainFactViewModel)
 }
-    
-    func factViewModel() -> FactViewModel {
-        fact.toMainFactViewModel
-        //convierte fact a factoviewModel
-        return fact.toMainFactViewModel
-    }
 
     func didFetchFail() {
         self.fact = Fact(iconURL: URL(string: "error"), value: "error")

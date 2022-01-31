@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5XV-3t-6oj">
-                                <rect key="frame" x="10" y="44" width="394" height="768"/>
+                                <rect key="frame" x="20" y="44" width="374" height="768"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCn-5Z-5Pf">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="750" constant="60" id="YFg-gd-vyh"/>
                                             <constraint firstAttribute="height" constant="60" id="w4h-3L-C29"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuck Norris Fact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouG-8d-v4X">
-                                        <rect key="frame" x="0.0" y="80" width="394" height="60"/>
+                                        <rect key="frame" x="0.0" y="80" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Ke5-rw-lpA"/>
                                         </constraints>
@@ -35,8 +35,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-04-kEv">
-                                        <rect key="frame" x="0.0" y="160" width="394" height="608"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-04-kEv">
+                                        <rect key="frame" x="0.0" y="160" width="374" height="608"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,6 +48,16 @@
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nC2-S1-GDx">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bJ-nK-lNk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="RandomFact:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GVT-lL-rF3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -58,12 +68,13 @@
                             <constraint firstItem="nC2-S1-GDx" firstAttribute="top" secondItem="5XV-3t-6oj" secondAttribute="bottom" id="AGh-iQ-fdV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nC2-S1-GDx" secondAttribute="trailing" id="COe-EX-GAn"/>
                             <constraint firstItem="5XV-3t-6oj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DAR-pz-d1S"/>
-                            <constraint firstItem="5XV-3t-6oj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="iEl-mz-8gf"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5XV-3t-6oj" secondAttribute="trailing" constant="10" id="nR3-6E-byd"/>
+                            <constraint firstItem="5XV-3t-6oj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="iEl-mz-8gf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5XV-3t-6oj" secondAttribute="trailing" constant="20" id="nR3-6E-byd"/>
                             <constraint firstItem="nC2-S1-GDx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zrC-TB-qyG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="RandomFact" destination="1bJ-nK-lNk" id="ybv-lZ-M0c"/>
                         <outlet property="factImage" destination="eCn-5Z-5Pf" id="D62-vB-3rY"/>
                         <outlet property="factLabel" destination="Aa6-04-kEv" id="Nzo-bI-FqQ"/>
                         <outlet property="factTitle" destination="ouG-8d-v4X" id="XQJ-gq-9UQ"/>

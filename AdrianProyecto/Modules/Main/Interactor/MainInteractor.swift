@@ -13,11 +13,11 @@ class MainInteractor: MainInteractorContract {
     var mainProvider: MainProviderContract?
  
     func fetchItems() {
-        print("interactor")
         mainProvider?.getMainFact({ result in
             switch result {
             case .success(let fact): self.output?.didFetch(fact: fact)
             case .failure: self.output?.didFetchFail()
+                //MARK: TODO mensaje de error cuando falla
             }
         })
     }

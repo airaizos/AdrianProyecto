@@ -13,10 +13,15 @@
 		3A16455C27A49A7500D8369C /* AdrianProyecto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A16455A27A49A7500D8369C /* AdrianProyecto.xcdatamodeld */; };
 		3A16455E27A49A7600D8369C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A16455D27A49A7600D8369C /* Assets.xcassets */; };
 		3A16456127A49A7600D8369C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A16455F27A49A7600D8369C /* LaunchScreen.storyboard */; };
+		3A35B97F27A8416B00E7582C /* ListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35B97E27A8416B00E7582C /* ListContract.swift */; };
+		3A35B98227A844F400E7582C /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35B98127A844F400E7582C /* ListPresenter.swift */; };
+		3A35B98527A845D400E7582C /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35B98427A845D400E7582C /* ListInteractor.swift */; };
+		3A35B98727A8474D00E7582C /* ListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35B98627A8474C00E7582C /* ListProvider.swift */; };
+		3A35B98927A8476A00E7582C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35B98827A8476A00E7582C /* Category.swift */; };
 		3A4664AC27A6BFEE0042AA93 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664AB27A6BFEE0042AA93 /* MainPresenter.swift */; };
 		3A4664AF27A6C44F0042AA93 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664AE27A6C44F0042AA93 /* MainInteractor.swift */; };
-		3A4664B227A6C78C0042AA93 /* MainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B127A6C78C0042AA93 /* MainProvider.swift */; };
-		3A4664B527A6C82B0042AA93 /* MainProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B427A6C82B0042AA93 /* MainProviderError.swift */; };
+		3A4664B227A6C78C0042AA93 /* FactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B127A6C78C0042AA93 /* FactProvider.swift */; };
+		3A4664B527A6C82B0042AA93 /* ProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B427A6C82B0042AA93 /* ProviderError.swift */; };
 		3A4664B727A6FFB10042AA93 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4664B627A6FFB10042AA93 /* MainWireframe.swift */; };
 		3A4697D827A49EB800BBADC0 /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4697D727A49EB800BBADC0 /* InitialControllerBuilder.swift */; };
 		3A4697DA27A49ED200BBADC0 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4697D927A49ED200BBADC0 /* ListViewController.storyboard */; };
@@ -46,10 +51,15 @@
 		3A16455D27A49A7600D8369C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A16456027A49A7600D8369C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A16456227A49A7600D8369C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A35B97E27A8416B00E7582C /* ListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContract.swift; sourceTree = "<group>"; };
+		3A35B98127A844F400E7582C /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		3A35B98427A845D400E7582C /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		3A35B98627A8474C00E7582C /* ListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProvider.swift; sourceTree = "<group>"; };
+		3A35B98827A8476A00E7582C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3A4664AB27A6BFEE0042AA93 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		3A4664AE27A6C44F0042AA93 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
-		3A4664B127A6C78C0042AA93 /* MainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProvider.swift; sourceTree = "<group>"; };
-		3A4664B427A6C82B0042AA93 /* MainProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProviderError.swift; sourceTree = "<group>"; };
+		3A4664B127A6C78C0042AA93 /* FactProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactProvider.swift; sourceTree = "<group>"; };
+		3A4664B427A6C82B0042AA93 /* ProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderError.swift; sourceTree = "<group>"; };
 		3A4664B627A6FFB10042AA93 /* MainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
 		3A4697D727A49EB800BBADC0 /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = "<group>"; };
 		3A4697D927A49ED200BBADC0 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 				3A4697F127A4A68E00BBADC0 /* Main */,
 				3A4697D627A49E8400BBADC0 /* Form */,
 				3A4697D527A49E7D00BBADC0 /* List */,
+				3A35B98327A8454B00E7582C /* Interactor */,
 				3A4697D427A49DCD00BBADC0 /* Detail */,
 				3A4697FC27A4AA7F00BBADC0 /* UseCases */,
 				3A4697F927A4A94A00BBADC0 /* Models */,
@@ -131,6 +142,22 @@
 				3A4697D727A49EB800BBADC0 /* InitialControllerBuilder.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		3A35B98027A844D700E7582C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A35B98127A844F400E7582C /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3A35B98327A8454B00E7582C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3A35B98427A845D400E7582C /* ListInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		3A4664A927A6BFCA0042AA93 /* Presenter */ = {
@@ -160,7 +187,8 @@
 		3A4664B027A6C76D0042AA93 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				3A4664B127A6C78C0042AA93 /* MainProvider.swift */,
+				3A4664B127A6C78C0042AA93 /* FactProvider.swift */,
+				3A35B98627A8474C00E7582C /* ListProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -168,7 +196,7 @@
 		3A4664B327A6C7F20042AA93 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				3A4664B427A6C82B0042AA93 /* MainProviderError.swift */,
+				3A4664B427A6C82B0042AA93 /* ProviderError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -185,8 +213,10 @@
 		3A4697D527A49E7D00BBADC0 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				3A4697DD27A49EF500BBADC0 /* UI */,
 				3A4697EC27A4A1CE00BBADC0 /* ListControllerBuilder.swift */,
+				3A35B97E27A8416B00E7582C /* ListContract.swift */,
+				3A4697DD27A49EF500BBADC0 /* UI */,
+				3A35B98027A844D700E7582C /* Presenter */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -253,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4697FA27A4A99000BBADC0 /* Fact.swift */,
+				3A35B98827A8476A00E7582C /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,14 +432,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A46980027A4ACDB00BBADC0 /* MainContract.swift in Sources */,
+				3A35B97F27A8416B00E7582C /* ListContract.swift in Sources */,
 				3A4697FE27A4AAA700BBADC0 /* FetchRandomFactUseCase.swift in Sources */,
 				3A4664AC27A6BFEE0042AA93 /* MainPresenter.swift in Sources */,
 				3A16455627A49A7500D8369C /* ViewController.swift in Sources */,
 				3A16455227A49A7500D8369C /* AppDelegate.swift in Sources */,
+				3A35B98527A845D400E7582C /* ListInteractor.swift in Sources */,
 				3A4664AF27A6C44F0042AA93 /* MainInteractor.swift in Sources */,
 				3A4697E227A49F8500BBADC0 /* FormViewController.swift in Sources */,
+				3A35B98927A8476A00E7582C /* Category.swift in Sources */,
 				3A4697F627A4A6CF00BBADC0 /* MainViewController.swift in Sources */,
-				3A4664B527A6C82B0042AA93 /* MainProviderError.swift in Sources */,
+				3A4664B527A6C82B0042AA93 /* ProviderError.swift in Sources */,
 				3A4697ED27A4A1CE00BBADC0 /* ListControllerBuilder.swift in Sources */,
 				3A4697DC27A49EE800BBADC0 /* ListViewController.swift in Sources */,
 				3A16455427A49A7500D8369C /* SceneDelegate.swift in Sources */,
@@ -416,7 +450,9 @@
 				3A16455C27A49A7500D8369C /* AdrianProyecto.xcdatamodeld in Sources */,
 				3A4697EF27A4A1F000BBADC0 /* DetailControllerBuilder.swift in Sources */,
 				3A4664B727A6FFB10042AA93 /* MainWireframe.swift in Sources */,
-				3A4664B227A6C78C0042AA93 /* MainProvider.swift in Sources */,
+				3A35B98227A844F400E7582C /* ListPresenter.swift in Sources */,
+				3A4664B227A6C78C0042AA93 /* FactProvider.swift in Sources */,
+				3A35B98727A8474D00E7582C /* ListProvider.swift in Sources */,
 				3A4697D827A49EB800BBADC0 /* InitialControllerBuilder.swift in Sources */,
 				3A4697FB27A4A99000BBADC0 /* Fact.swift in Sources */,
 				3A4697E927A4A0CF00BBADC0 /* DetailViewController.swift in Sources */,

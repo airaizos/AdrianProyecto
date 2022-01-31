@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum MainProviderError: Error {
+enum ProviderError: Error {
 case badURL, generic(Error?)
 }

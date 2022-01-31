@@ -3,15 +3,18 @@
 //  AdrianProyecto
 //
 //  Created by Adrian Iraizos Mendoza on 28/1/22.
-//
+// CategoryCell
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, ListViewContract {
+    
+    var presenter: ListPresenterContract?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter?.viewDidLoad()
     }
 
 
