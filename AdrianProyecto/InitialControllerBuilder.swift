@@ -11,10 +11,20 @@ import UIKit
 class InitialControllerBuilder {
     func build() -> UIViewController {
         let tabBarController = UITabBarController()
-        let viewControllers = [buildQueryFact(),buildMain(),buildList(),buildForm()]
+        let viewControllers = [buildListado(),buildMain(),buildForm()]
         tabBarController.setViewControllers(viewControllers, animated: true)
         
         return tabBarController
+    }
+}
+
+private extension InitialControllerBuilder {
+    func buildListado() -> UINavigationController {
+ //     let viewController = ListControllerBuilder().build()
+        let viewController = ListadoControllerBuilder().build()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = UITabBarItem(title: "Listado", image: UIImage(systemName:"0.circle"), tag: 0)
+        return navigationController
     }
 }
 
