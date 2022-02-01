@@ -294,8 +294,6 @@
 				3A4697DB27A49EE800BBADC0 /* ListViewController.swift */,
 				3A35B98F27A88E1C00E7582C /* ListViewCell.swift */,
 				3A35B99527A88FBC00E7582C /* ListViewCell.xib */,
-				3AE8916527A9F02E00B55742 /* TableViewCell.swift */,
-				3AE8916627A9F02E00B55742 /* TableViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -412,6 +410,7 @@
 		3AE8914527A9EF5A00B55742 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8917227A9F46800B55742 /* Cell */,
 				3AE8914627A9EF5A00B55742 /* ListadoViewController.storyboard */,
 				3AE8914727A9EF5A00B55742 /* ListadoViewCell.swift */,
 				3AE8914827A9EF5A00B55742 /* ListadoViewController.swift */,
@@ -533,6 +532,15 @@
 				3AE8913527A9C2CF00B55742 /* QueryFactProvider.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		3AE8917227A9F46800B55742 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8916527A9F02E00B55742 /* TableViewCell.swift */,
+				3AE8916627A9F02E00B55742 /* TableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5EDC23F5127C1FFEC7B6F0C5 /* Frameworks */ = {
