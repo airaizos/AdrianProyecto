@@ -7,6 +7,16 @@
 
 import UIKit
 
+struct TableViewCellModel {
+    let name: String
+    let geoRange: String
+    let image: URL?
+    let lenghtMax: String
+    let weightMax: String
+    let lifespan: String
+
+}
+
 struct ListadoViewCellModel {
     
     let title: String

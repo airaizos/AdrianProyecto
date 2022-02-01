@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-
+/*
 struct TableViewCellModel {
     let name: String
     let geoRange: String
@@ -17,7 +17,7 @@ struct TableViewCellModel {
     let lifespan: String
 
 }
-
+*/
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellImage: UIImageView!

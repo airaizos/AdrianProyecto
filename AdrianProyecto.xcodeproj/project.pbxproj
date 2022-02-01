@@ -36,8 +36,6 @@
 		3AE8915B27A9EF5A00B55742 /* ListadoProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8914D27A9EF5A00B55742 /* ListadoProviderError.swift */; };
 		3AE8915C27A9EF5A00B55742 /* ListadoControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8914E27A9EF5A00B55742 /* ListadoControllerBuilder.swift */; };
 		3AE8915D27A9EF5A00B55742 /* animalData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8915027A9EF5A00B55742 /* animalData.json */; };
-		3AE8915E27A9EF5A00B55742 /* FetchZooUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8915227A9EF5A00B55742 /* FetchZooUseCase.swift */; };
-		3AE8915F27A9EF5A00B55742 /* FetchAnimalsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8915327A9EF5A00B55742 /* FetchAnimalsUseCase.swift */; };
 		3AE8916027A9EF5A00B55742 /* ListadoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8915527A9EF5A00B55742 /* ListadoInteractor.swift */; };
 		3AE8916227A9EF8A00B55742 /* Animales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8916127A9EF8A00B55742 /* Animales.swift */; };
 		3AE8916427A9EF9E00B55742 /* NetworkListadoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8916327A9EF9E00B55742 /* NetworkListadoProvider.swift */; };
@@ -78,8 +76,6 @@
 		3AE8914D27A9EF5A00B55742 /* ListadoProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListadoProviderError.swift; sourceTree = "<group>"; };
 		3AE8914E27A9EF5A00B55742 /* ListadoControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListadoControllerBuilder.swift; sourceTree = "<group>"; };
 		3AE8915027A9EF5A00B55742 /* animalData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animalData.json; sourceTree = "<group>"; };
-		3AE8915227A9EF5A00B55742 /* FetchZooUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchZooUseCase.swift; sourceTree = "<group>"; };
-		3AE8915327A9EF5A00B55742 /* FetchAnimalsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchAnimalsUseCase.swift; sourceTree = "<group>"; };
 		3AE8915527A9EF5A00B55742 /* ListadoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListadoInteractor.swift; sourceTree = "<group>"; };
 		3AE8916127A9EF8A00B55742 /* Animales.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animales.swift; sourceTree = "<group>"; };
 		3AE8916327A9EF9E00B55742 /* NetworkListadoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkListadoProvider.swift; sourceTree = "<group>"; };
@@ -200,13 +196,13 @@
 		3A4697F127A4A68E00BBADC0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3AE8916D27A9F2F300B55742 /* Model */,
 				3A4697F727A4A72700BBADC0 /* MainControllerBuilder.swift */,
 				3A4697FF27A4ACDB00BBADC0 /* MainContract.swift */,
 				3A4697F227A4A6AF00BBADC0 /* UI */,
 				3A4664A927A6BFCA0042AA93 /* Presenter */,
 				3A4664AD27A6C43D0042AA93 /* Interactor */,
 				3A4664AA27A6BFCF0042AA93 /* Wireframe */,
+				3AE8916D27A9F2F300B55742 /* Model */,
 				3AE8916C27A9F2E000B55742 /* Provider */,
 			);
 			path = Main;
@@ -224,15 +220,14 @@
 		3AE8914427A9EF5A00B55742 /* Listado */ = {
 			isa = PBXGroup;
 			children = (
-				3AE8916B27A9F26600B55742 /* Model */,
 				3AE8914E27A9EF5A00B55742 /* ListadoControllerBuilder.swift */,
 				3AE8914927A9EF5A00B55742 /* ListadoViewContract.swift */,
 				3AE8914527A9EF5A00B55742 /* UI */,
 				3AE8914A27A9EF5A00B55742 /* Presenter */,
 				3AE8915427A9EF5A00B55742 /* Interactor */,
 				3AE8914C27A9EF5A00B55742 /* Enums */,
+				3AE8916B27A9F26600B55742 /* Model */,
 				3AE8916A27A9F23F00B55742 /* Providers */,
-				3AE8915127A9EF5A00B55742 /* UseCases */,
 				3AE8914F27A9EF5A00B55742 /* SupportingFiles */,
 			);
 			path = Listado;
@@ -271,15 +266,6 @@
 				3AE8915027A9EF5A00B55742 /* animalData.json */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		3AE8915127A9EF5A00B55742 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				3AE8915227A9EF5A00B55742 /* FetchZooUseCase.swift */,
-				3AE8915327A9EF5A00B55742 /* FetchAnimalsUseCase.swift */,
-			);
-			path = UseCases;
 			sourceTree = "<group>";
 		};
 		3AE8915427A9EF5A00B55742 /* Interactor */ = {
@@ -481,7 +467,6 @@
 				3AE8916027A9EF5A00B55742 /* ListadoInteractor.swift in Sources */,
 				3AE8915C27A9EF5A00B55742 /* ListadoControllerBuilder.swift in Sources */,
 				3A4664B527A6C82B0042AA93 /* ProviderError.swift in Sources */,
-				3AE8915F27A9EF5A00B55742 /* FetchAnimalsUseCase.swift in Sources */,
 				3A16455427A49A7500D8369C /* SceneDelegate.swift in Sources */,
 				3A4697EB27A4A1BD00BBADC0 /* FormControllerBuilder.swift in Sources */,
 				3A16455C27A49A7500D8369C /* AdrianProyecto.xcdatamodeld in Sources */,
@@ -491,7 +476,6 @@
 				3AE8916727A9F02E00B55742 /* TableViewCell.swift in Sources */,
 				3A4664B227A6C78C0042AA93 /* FactProvider.swift in Sources */,
 				3AE8915727A9EF5A00B55742 /* ListadoViewCell.swift in Sources */,
-				3AE8915E27A9EF5A00B55742 /* FetchZooUseCase.swift in Sources */,
 				3AE8915A27A9EF5A00B55742 /* ListadoPresenter.swift in Sources */,
 				3A4697D827A49EB800BBADC0 /* InitialControllerBuilder.swift in Sources */,
 				3AE8915827A9EF5A00B55742 /* ListadoViewController.swift in Sources */,
