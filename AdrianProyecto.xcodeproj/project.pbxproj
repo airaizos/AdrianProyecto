@@ -173,6 +173,7 @@
 		3A16455027A49A7500D8369C /* AdrianProyecto */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8916927A9F1F000B55742 /* Limpieza */,
 				3A4697D727A49EB800BBADC0 /* InitialControllerBuilder.swift */,
 				3A16456827A49CCA00D8369C /* Modules */,
 				3A16455127A49A7500D8369C /* AppDelegate.swift */,
@@ -190,15 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				3AE8914427A9EF5A00B55742 /* Listado */,
-				3AE8912227A9BED600B55742 /* QueryFact */,
 				3A4697F127A4A68E00BBADC0 /* Main */,
 				3A4697D627A49E8400BBADC0 /* Form */,
-				3A4697D527A49E7D00BBADC0 /* List */,
-				3A4697D427A49DCD00BBADC0 /* Detail */,
-				3A4697FC27A4AA7F00BBADC0 /* UseCases */,
-				3A4697F927A4A94A00BBADC0 /* Models */,
 				3A4664B327A6C7F20042AA93 /* Enums */,
-				3A4664B027A6C76D0042AA93 /* Providers */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -251,17 +246,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		3A4664B027A6C76D0042AA93 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				3A4664B127A6C78C0042AA93 /* FactProvider.swift */,
-				3A35B98627A8474C00E7582C /* ListProvider.swift */,
-				3AE8913527A9C2CF00B55742 /* QueryFactProvider.swift */,
-				3AE8916327A9EF9E00B55742 /* NetworkListadoProvider.swift */,
-			);
-			path = Providers;
-			sourceTree = "<group>";
-		};
 		3A4664B327A6C7F20042AA93 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +266,8 @@
 		3A4697D527A49E7D00BBADC0 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8917027A9F37500B55742 /* Provider */,
+				3AE8916F27A9F34000B55742 /* Model */,
 				3A4697EC27A4A1CE00BBADC0 /* ListControllerBuilder.swift */,
 				3A35B97E27A8416B00E7582C /* ListContract.swift */,
 				3A4697DD27A49EF500BBADC0 /* UI */,
@@ -335,12 +321,14 @@
 		3A4697F127A4A68E00BBADC0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8916D27A9F2F300B55742 /* Model */,
 				3A4697F727A4A72700BBADC0 /* MainControllerBuilder.swift */,
 				3A4697FF27A4ACDB00BBADC0 /* MainContract.swift */,
 				3A4697F227A4A6AF00BBADC0 /* UI */,
 				3A4664A927A6BFCA0042AA93 /* Presenter */,
 				3A4664AD27A6C43D0042AA93 /* Interactor */,
 				3A4664AA27A6BFCF0042AA93 /* Wireframe */,
+				3AE8916C27A9F2E000B55742 /* Provider */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -354,28 +342,11 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		3A4697F927A4A94A00BBADC0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3A4697FA27A4A99000BBADC0 /* Fact.swift */,
-				3A35B98827A8476A00E7582C /* Category.swift */,
-				3AE8910B27A9B23F00B55742 /* QueryFact.swift */,
-				3AE8916127A9EF8A00B55742 /* Animales.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		3A4697FC27A4AA7F00BBADC0 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				3A4697FD27A4AAA700BBADC0 /* FetchRandomFactUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		3AE8912227A9BED600B55742 /* QueryFact */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8917127A9F39300B55742 /* Provider */,
+				3AE8916E27A9F30400B55742 /* Model */,
 				3AE8912927A9BF3100B55742 /* QueryFactControllerBuilder.swift */,
 				3AE8912727A9BF2500B55742 /* QueryFactContract.swift */,
 				3AE8912327A9BEE600B55742 /* UI */,
@@ -424,14 +395,16 @@
 		3AE8914427A9EF5A00B55742 /* Listado */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8916B27A9F26600B55742 /* Model */,
 				3AE8914E27A9EF5A00B55742 /* ListadoControllerBuilder.swift */,
 				3AE8914927A9EF5A00B55742 /* ListadoViewContract.swift */,
 				3AE8914527A9EF5A00B55742 /* UI */,
 				3AE8914A27A9EF5A00B55742 /* Presenter */,
-				3AE8914C27A9EF5A00B55742 /* Enums */,
-				3AE8914F27A9EF5A00B55742 /* SupportingFiles */,
-				3AE8915127A9EF5A00B55742 /* UseCases */,
 				3AE8915427A9EF5A00B55742 /* Interactor */,
+				3AE8914C27A9EF5A00B55742 /* Enums */,
+				3AE8916A27A9F23F00B55742 /* Providers */,
+				3AE8915127A9EF5A00B55742 /* UseCases */,
+				3AE8914F27A9EF5A00B55742 /* SupportingFiles */,
 			);
 			path = Listado;
 			sourceTree = "<group>";
@@ -485,6 +458,81 @@
 				3AE8915527A9EF5A00B55742 /* ListadoInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3AE8916927A9F1F000B55742 /* Limpieza */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8912227A9BED600B55742 /* QueryFact */,
+				3A4697D527A49E7D00BBADC0 /* List */,
+				3A4697D427A49DCD00BBADC0 /* Detail */,
+			);
+			path = Limpieza;
+			sourceTree = "<group>";
+		};
+		3AE8916A27A9F23F00B55742 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8916327A9EF9E00B55742 /* NetworkListadoProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		3AE8916B27A9F26600B55742 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8916127A9EF8A00B55742 /* Animales.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AE8916C27A9F2E000B55742 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3A4697FD27A4AAA700BBADC0 /* FetchRandomFactUseCase.swift */,
+				3A4664B127A6C78C0042AA93 /* FactProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		3AE8916D27A9F2F300B55742 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A4697FA27A4A99000BBADC0 /* Fact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AE8916E27A9F30400B55742 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8910B27A9B23F00B55742 /* QueryFact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AE8916F27A9F34000B55742 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A35B98827A8476A00E7582C /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AE8917027A9F37500B55742 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3A35B98627A8474C00E7582C /* ListProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		3AE8917127A9F39300B55742 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8913527A9C2CF00B55742 /* QueryFactProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		5EDC23F5127C1FFEC7B6F0C5 /* Frameworks */ = {
