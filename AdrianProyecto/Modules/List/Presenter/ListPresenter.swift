@@ -4,7 +4,6 @@
 //
 //  Created by Adrian Iraizos Mendoza on 31/1/22.
 
-
 import Foundation
 
 class ListPresenter: ListPresenterContract {
@@ -14,15 +13,27 @@ class ListPresenter: ListPresenterContract {
     var wireframe: ListWireframeContract?
     var fecthCategories: ListProviderContract?
     
-    private var categories = [Category]()
-    
-    var numCategories: Int {
-        categories.count
+    private var categories = [Category]() {
+        didSet {
+            view?.reloadData()
+        }
     }
     
     func viewDidLoad() {
         interactor?.output = self
         interactor?.fetchItems()
+    }
+    
+    var numCategories: Int {
+        categories.count
+    }
+    //porque no pasa por aqui??
+    func cellViewModel(at indexPath: IndexPath) -> ListCellModel {
+        let item = categories[indexPath.row]
+        
+        print("item: \(item)")
+        return item.toListCellViewModel
+        
     }
 }
 
@@ -30,6 +41,7 @@ class ListPresenter: ListPresenterContract {
 extension ListPresenter: ListInteractorOutputContract {
     func didFetch(categories: [Category]) {
         self.categories = categories
+        print("presenter:\(self.categories[1])")
     }
     
     func didFetchFail() {
@@ -38,11 +50,7 @@ extension ListPresenter: ListInteractorOutputContract {
 }
 
 extension ListPresenter {
-    func cellViewModel(at indexPath: IndexPath) -> ListCellModel {
-        let item = categories[indexPath.row]
-        
-        return item.toListCellViewModel
-    }
+
     
     
     func didSelectItem(at indexPath: IndexPath) {

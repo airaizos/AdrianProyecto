@@ -10,33 +10,11 @@ import UIKit
 
 struct ListCellModel {
     let cellCategory: String
- //  var cellIcon: String
-    /*{
-        switch cellCategory {
-        case "animal": return "🦁"
-        case "career": return "👨🏼‍⚕️"
-        case "celebrity": return "🕺🏼"
-        case "dev": return "⌨️"
-        case "explicit":return "🔞"
-        case "fashion": return "👠"
-        case "food": return"🍔"
-        case "history":return "📖"
-        case "money": return "💰"
-        case "movie": return "🎬"
-        case "music": return "🎶"
-        case "political": return "🏛"
-        case "religion": return "🛐"
-        case "science": return "👨🏼‍🔬"
-        case "sport": return "🏋🏼‍♂️"
-        case "travel": return "🛫"
-        default: return "🥊"
-        }
-     */
 }
 class ListViewCell: UITableViewCell {
     
-    @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var iconLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,8 +26,12 @@ class ListViewCell: UITableViewCell {
     }
     
     func configure(with viewModel: ListCellModel) {
+        
+        //MARK: TODO porque me da eror de nil?
+      //  Thread 1: Fatal error: Unexpectedly found nil while implicitly unwrapping an Optional value
+                                        
      //   iconLabel.text = viewModel.cellIcon
-        categoryLabel.text = viewModel.cellCategory
+   //     iconLabel.text = viewModel.cellCategory
         
     }
     

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Uhk-et-fA4" customClass="ListViewCell" customModule="AdrianProyecto" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" id="Uhk-et-fA4" customClass="ListViewCell" customModule="AdrianProyecto" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uhk-et-fA4" id="rQZ-AB-RzQ">
@@ -47,8 +47,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="categoryLabel" destination="QMx-J8-GRg" id="JdX-Sr-4tm"/>
-                <outlet property="iconLabel" destination="uIq-Fk-o7N" id="I1F-Ov-ESv"/>
+                <outlet property="categoryLabel" destination="QMx-J8-GRg" id="Dhq-nH-c5W"/>
+                <outlet property="iconLabel" destination="uIq-Fk-o7N" id="kmi-SS-waq"/>
             </connections>
             <point key="canvasLocation" x="182.60869565217394" y="-152.00892857142856"/>
         </tableViewCell>

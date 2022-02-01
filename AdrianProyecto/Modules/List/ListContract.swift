@@ -10,6 +10,7 @@ import UIKit
 
 protocol ListViewContract: UIViewController {
     var presenter: ListPresenterContract? { get set }
+    func reloadData()
 }
 
 protocol ListPresenterContract {

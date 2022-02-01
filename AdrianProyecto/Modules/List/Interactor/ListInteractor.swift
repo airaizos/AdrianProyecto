@@ -3,7 +3,6 @@
 //  AdrianProyecto
 //
 //  Created by Adrian Iraizos Mendoza on 31/1/22.
-//MARK: Todo. hay que pasar el array de strings a categories
 
 import Foundation
 
