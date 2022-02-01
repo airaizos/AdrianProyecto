@@ -16,7 +16,13 @@ protocol ListPresenterContract {
     var view: ListViewContract? { get set }
     var interactor: ListInteractorContract? { get set }
     var wireframe: ListWireframeContract? { get set }
+    
+    var numCategories: Int { get }
+    
     func viewDidLoad()
+    
+    func cellViewModel(at indexPath: IndexPath) -> ListCellModel
+    func didSelectItem(at indexPath: IndexPath)
 }
 
 protocol ListInteractorContract {
@@ -25,15 +31,17 @@ protocol ListInteractorContract {
     func fetchItems()
 }
 
-protocol ListInteractorOutputContract {
-    func didFetch(category: Category)
+protocol ListInteractorOutputContract: AnyObject {
+ //   func didFetch(categories: [String])
+    func didFetch(categories: [Category])
     func didFetchFail()
 }
 
 protocol ListWireframeContract {
-    
+    var view: UIViewController? { get set }
+    func navigate(to item: Category)
 }
 
 protocol ListProviderContract {
-    func getItems(_ completion: @escaping (Result<Category,ProviderError>) ->())
+    func getItems(_ completion: @escaping (Result<[String],ProviderError>) ->())
 }

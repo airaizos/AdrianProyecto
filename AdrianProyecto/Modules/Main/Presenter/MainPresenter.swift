@@ -3,7 +3,7 @@
 //  AdrianProyecto
 //
 //  Created by Adrian Iraizos Mendoza on 30/1/22.
-//
+// MARK: TODO porque se tiene que conformar con MainInteractorOutputContract -> Va como extensión
 
 import Foundation
 
@@ -22,13 +22,12 @@ class MainPresenter: MainPresenterContract, MainInteractorOutputContract {
     var fact:Fact = Fact(iconURL: URL(string: "https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png"), value: "Init vacio")
     
     func viewDidLoad() {
-        interactor?.output  = self
+        interactor?.output = self
         interactor?.fetchItems()
       
     }
     func didFetch(fact: Fact) {
         self.fact = fact
-        //aqui lo tengo los datos del api
         view?.configure(with: fact.toMainFactViewModel)
 }
 
