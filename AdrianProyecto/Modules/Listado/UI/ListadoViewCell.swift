@@ -3,7 +3,7 @@
 //  AnimalesDelMundo
 //
 //  Created by Adrian Iraizos Mendoza on 27/1/22.
-//listadoCell
+//
 
 import UIKit
 
