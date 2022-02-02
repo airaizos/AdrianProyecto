@@ -134,9 +134,11 @@
                         <outlet property="cifTextField" destination="aOd-t5-sM5" id="dib-Vh-JtG"/>
                         <outlet property="companyNameTextField" destination="8YN-9x-73I" id="RVP-qD-etk"/>
                         <outlet property="countryCheckDigitsTextField" destination="nws-hf-p59" id="oSI-RT-pOr"/>
+                        <outlet property="customerFormLabel" destination="yrF-Ou-ICu" id="QFZ-TN-6yQ"/>
                         <outlet property="emailTextField" destination="uoj-tR-Yxz" id="zeC-jh-k3Q"/>
                         <outlet property="officeTextField" destination="ZlH-Xk-CSu" id="etT-yj-D7J"/>
                         <outlet property="phoneTextField" destination="MXd-Gf-ZSk" id="CUI-pp-ueC"/>
+                        <outlet property="saveButtonOutlet" destination="9eo-MD-YEO" id="OVz-YN-SaY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

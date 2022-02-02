@@ -11,9 +11,22 @@ class FormViewController: UIViewController {
     
     //MARK: Oulets
     
-    @IBOutlet weak var cifTextField: UITextField!
-    @IBOutlet weak var companyNameTextField: UITextField!
-    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cifTextField: UITextField!  {
+        didSet {
+            cifTextField.placeholder = NSLocalizedString("user_form_CIF_text_field_placeholder", comment: "")
+        }
+    }
+    @IBOutlet weak var companyNameTextField: UITextField! {
+        didSet {
+            companyNameTextField.placeholder = NSLocalizedString("user_form_company_text_field_placeholder", comment: "")
+        }
+    }
+    @IBOutlet weak var addressTextField: UITextField! {
+        didSet {
+            addressTextField.placeholder = NSLocalizedString("user_form_address_text_field_placeholder", comment: "")
+        }
+    }
+    
     @IBOutlet weak var countryCheckDigitsTextField: UITextField!   {
         didSet {
             bankTextField.placeholder = NSLocalizedString("user_form_country_check_digits_text_field_placeholder", comment: "")
@@ -51,6 +64,18 @@ class FormViewController: UIViewController {
             emailTextField.placeholder = NSLocalizedString("user_form_email_text_field_placeholder", comment: "")
         }
     }
+    
+    @IBOutlet weak var saveButtonOutlet: UIButton! {
+        didSet {
+            saveButtonOutlet.titleLabel?.text = NSLocalizedString("user_form_save_button_outlet", comment: "")
+        }
+    }
+    @IBOutlet weak var customerFormLabel: UILabel! {
+        didSet {
+            customerFormLabel.text = NSLocalizedString("user_form_customer_form_label", comment: "")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
