@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  AdrianProyecto
+
+  Created by Adrian Iraizos Mendoza on 2/2/22.
+  
+*/
+
+"user_form_email_text_field_placeholder" = "Email";
+"user_form_phone_text_field_placeholder" = "Phone";
+"user_form_account_text_field_placeholder" = "10 digits";
+"user_form_account_check_digits_text_field_placeholder" = "CD";

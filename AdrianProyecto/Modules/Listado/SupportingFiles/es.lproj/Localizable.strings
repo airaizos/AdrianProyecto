@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  AdrianProyecto
+
+  Created by Adrian Iraizos Mendoza on 2/2/22.
+  
+*/
+
+"user_form_email_text_field_placeholder" = "Correo Electrónico";
+"user_form_phone_text_field_placeholder" = "Teléfono";
+"user_form_account_text_field_placeholder" = "10 dígitos";
+"user_form_account_check_digits_text_field_placeholder" = "DC";
+"user_form_ofice_text_field_placeholder" = "Oficina";
+"user_form_bank_text_field_placeholder" = "Entidad";
+"user_form_country_check_digits_text_field_placeholder" = "DC";
