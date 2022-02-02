@@ -40,6 +40,7 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         guard let viewModel = presenter?.cellViewModel(at: indexPath), let cell = tableView.dequeueReusableCell(withIdentifier: "listadoCell", for: indexPath) as? ListadoViewCell else {
             fatalError()
         }
+      
         cell.configure(with: viewModel)
         return cell
         
@@ -50,5 +51,11 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
 extension ListadoViewController {
     static func createFromStoryboard() -> ListadoViewController {
         return UIStoryboard(name: "ListadoViewController", bundle: .main).instantiateViewController(withIdentifier: "ListadoViewController") as! ListadoViewController
+    }
+}
+
+extension ListadoViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectItem(at: indexPath)
     }
 }

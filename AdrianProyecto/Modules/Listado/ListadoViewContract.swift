@@ -18,13 +18,14 @@ protocol ListadoViewContract: UIViewController {
 protocol ListadoPresenterContract: AnyObject {
     var view: ListadoViewContract? { get set }
     var interactor: ListadoInteractorContract? { get set }
-    var wireframe: ListadoWireFrameContract? { get set }
+    var wireframe: ListadoWireframeContract? { get set }
     
     var numItems: Int { get }
     
     //MARK: Métodos
     func viewDidLoad()
     func cellViewModel(at indexPath: IndexPath) -> ListadoViewCellModel
+    func didSelectItem(at indexPath: IndexPath)
 }
 
 protocol ListadoInteractorContract {
@@ -37,7 +38,7 @@ protocol ListadoInteractorOutputContract: AnyObject {
     func didFetchFail()
 }
 
-protocol ListadoWireFrameContract {
+protocol ListadoWireframeContract {
     var view: UIViewController? { get set }
     func navigate(to animal: Animal)
 }

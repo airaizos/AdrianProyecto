@@ -69,4 +69,8 @@ extension Animal {
     var toListadoCellViewModel: ListadoViewCellModel {
         ListadoViewCellModel(title: name, description: latinName, icono: lifespan)
     }
+    
+    var toListadoDetalleViewModel: ListadoDetalleViewModel {
+        ListadoDetalleViewModel(imageLink: imageLink, name: name, latinName: latinName, activeTime: activeTime, lengthMin: lengthMin, lengthMax: lengthMax, weightMin: weightMin, weightMax: weightMax, lifespan: lifespan, habitat: habitat, diet: diet, geoRange: geoRange)
+    }
 }

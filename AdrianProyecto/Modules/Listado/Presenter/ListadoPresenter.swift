@@ -18,7 +18,7 @@ class ListadoPresenter: ListadoPresenterContract {
     //MARK: dependencias
     weak var view: ListadoViewContract?
     var interactor: ListadoInteractorContract?
-    var wireframe: ListadoWireFrameContract?
+    var wireframe: ListadoWireframeContract?
     var fetchAnimals: ListadoProviderContract?
     
     private var animales = [Animal]() {
@@ -44,6 +44,14 @@ class ListadoPresenter: ListadoPresenterContract {
     
     private func fetchData() {
         interactor?.fetchItems()
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        let item = animales[indexPath.row]
+        
+        //A donde tiene que ir
+        wireframe?.navigate(to: item)
+        
     }
 }
 

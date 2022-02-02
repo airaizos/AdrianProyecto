@@ -24,6 +24,10 @@ struct ListadoDetalleViewModel {
 class ListadoDetalleViewController: UIViewController {
     
     var viewModel: ListadoDetalleViewModel?
+    
+    static func create() -> ListadoDetalleViewController {
+        return UIStoryboard(name: "ListadoDetalleViewController", bundle: .main).instantiateViewController(withIdentifier: "ListadoDetalleViewController") as! ListadoDetalleViewController
+    }
 
     //MARK: Outlets
   
@@ -42,14 +46,12 @@ class ListadoDetalleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            configure(with: viewModel)
     }
 }
 
 extension ListadoDetalleViewController {
-    static func create() -> ListadoDetalleViewController {
-        return UIStoryboard(name: "ListadoDetalleViewController", bundle: .main).instantiateViewController(withIdentifier: "ListadoDetalleViewController") as! ListadoDetalleViewController
-    }
+
     
     func configure(with viewModel: ListadoDetalleViewModel?) {
         guard let viewModel = viewModel else { return }
