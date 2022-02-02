@@ -28,7 +28,7 @@ protocol ListadoPresenterContract: AnyObject {
     func didSelectItem(at indexPath: IndexPath)
 }
 
-protocol ListadoInteractorContract {
+protocol ListadoInteractorContract: AnyObject {
     var output: ListadoInteractorOutputContract? { get set }
     func fetchItems()
 }
@@ -38,12 +38,12 @@ protocol ListadoInteractorOutputContract: AnyObject {
     func didFetchFail()
 }
 
-protocol ListadoWireframeContract {
+protocol ListadoWireframeContract: AnyObject {
     var view: UIViewController? { get set }
     func navigate(to animal: Animal)
 }
 
-protocol ListadoProviderContract {
+protocol ListadoProviderContract: AnyObject {
     func getAnimalListado(_ completion: @escaping (Result<[Animal],ListadoProviderError>) -> ())
 }
 

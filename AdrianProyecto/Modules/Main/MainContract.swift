@@ -14,7 +14,7 @@ protocol MainViewContract: UIViewController {
    
 }
 
-protocol MainPresenterContract {
+protocol MainPresenterContract: AnyObject {
     var view: MainViewContract? { get set }
     var interactor: MainInteractorContract? { get set }
     var wireframe: MainWireframeContract? { get set }
@@ -23,12 +23,12 @@ protocol MainPresenterContract {
     
 }
 
-protocol MainInteractorContract {
+protocol MainInteractorContract: AnyObject {
     var output: MainInteractorOutputContract? { get set }
     func fetchItems()
 }
 
-protocol MainWireframeContract {
+protocol MainWireframeContract: AnyObject {
     var view: UIViewController? { get set }
 }
 
@@ -37,6 +37,6 @@ protocol MainInteractorOutputContract: AnyObject {
     func didFetchFail()
 }
 
-protocol MainProviderContract {
+protocol MainProviderContract: AnyObject {
     func getMainFact(_ completion: @escaping (Result<Fact,ProviderError>) ->())
 }

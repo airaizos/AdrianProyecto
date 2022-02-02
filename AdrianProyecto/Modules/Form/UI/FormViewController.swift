@@ -9,6 +9,8 @@ import UIKit
 
 class FormViewController: UIViewController {
     
+    var presenter: FormPresenterContract?
+    
     //MARK: Oulets
     
     @IBOutlet weak var cifTextField: UITextField!  {
@@ -80,6 +82,10 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func didPressSave(_ sender: UIButton) {
+        presenter?.didPressSend()
     }
 }
 

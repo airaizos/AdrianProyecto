@@ -11,7 +11,6 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
 
     //MARK: Dependencias
     var presenter: ListadoPresenterContract?
- //   var fetchAnimales: NetworkListadoProvider?
 
     //MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
