@@ -33,7 +33,7 @@ class ListadoViewCell: UITableViewCell {
     
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellDescription: UILabel!
-    @IBOutlet weak var cellIcon: UILabel!
+   @IBOutlet weak var cellIcon: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,8 +48,7 @@ class ListadoViewCell: UITableViewCell {
 
     func configure(with viewModel: ListadoViewCellModel) {
         cellTitle.text = viewModel.title
-        cellDescription.text = viewModel.description
-        cellIcon.text = viewModel.icono
+      
     }
     
 }
