@@ -127,16 +127,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AccountCheckDigitsTextField" destination="x2U-OT-eeX" id="EeG-kv-A9U"/>
-                        <outlet property="AccountTextField" destination="sjt-cn-JjW" id="87f-lK-HBN"/>
-                        <outlet property="AddressTextField" destination="aZY-Hz-XD3" id="FDi-Ot-f7a"/>
-                        <outlet property="BankTextField" destination="vgC-lm-efJ" id="HHd-2E-gSM"/>
-                        <outlet property="CIFTextField" destination="aOd-t5-sM5" id="ESp-gw-jwg"/>
-                        <outlet property="CompanyNameTextField" destination="8YN-9x-73I" id="OWg-BR-Ewd"/>
-                        <outlet property="CountryCDTextField" destination="nws-hf-p59" id="zlb-9v-T6f"/>
-                        <outlet property="OfficeTextField" destination="ZlH-Xk-CSu" id="Rmb-KQ-Zyq"/>
-                        <outlet property="PhoneTextField" destination="MXd-Gf-ZSk" id="yGA-eZ-dhs"/>
-                        <outlet property="emailTextField" destination="uoj-tR-Yxz" id="pxz-Uh-aXa"/>
+                        <outlet property="accountCheckDigitsTextField" destination="x2U-OT-eeX" id="yx5-Gi-LjI"/>
+                        <outlet property="accountTextField" destination="sjt-cn-JjW" id="BpK-9s-Bg0"/>
+                        <outlet property="addressTextField" destination="aZY-Hz-XD3" id="KBY-j6-HA7"/>
+                        <outlet property="bankTextField" destination="vgC-lm-efJ" id="KZH-1M-b1J"/>
+                        <outlet property="cifTextField" destination="aOd-t5-sM5" id="dib-Vh-JtG"/>
+                        <outlet property="companyNameTextField" destination="8YN-9x-73I" id="RVP-qD-etk"/>
+                        <outlet property="countryCheckDigitsTextField" destination="nws-hf-p59" id="oSI-RT-pOr"/>
+                        <outlet property="emailTextField" destination="uoj-tR-Yxz" id="zeC-jh-k3Q"/>
+                        <outlet property="officeTextField" destination="ZlH-Xk-CSu" id="etT-yj-D7J"/>
+                        <outlet property="phoneTextField" destination="MXd-Gf-ZSk" id="CUI-pp-ueC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
