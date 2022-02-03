@@ -114,16 +114,10 @@ extension FormViewController {
     }
 }
 
-
 extension FormViewController {
     private func didUpdateValidation(input: UITextField, valid: Bool) {
         DispatchQueue.main.async {
-            if valid {
-                input.backgroundColor = .systemBackground
-            } else {
-                input.backgroundColor = .systemRed
-            }
-          //  input.backgroundColor = valid ? .systemBackground : .systemPink
+          input.backgroundColor = valid ? .systemBackground : .systemPink
         }
     }
     
@@ -199,5 +193,4 @@ extension FormViewController: UITextViewDelegate {
         }
         return true
     }
-  
 }

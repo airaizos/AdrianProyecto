@@ -12,18 +12,18 @@ class FormPresenter: FormPresenterContract {
     var view: FormViewContract?
     var interactor: FormInteractorContract?
     
-    private var formModel = FormModel(cif: nil, companyName: nil, address: nil, countryCheckDigits: nil, bank: nil, bankOffice: nil, accountCheckDigits: nil, account: nil, phone: nil, email: nil) {
-        didSet {
-            print(formModel)
-        }
-    }
+    private var formModel = FormModel(cif: nil, companyName: nil, address: nil, countryCheckDigits: nil, bank: nil, bankOffice: nil, accountCheckDigits: nil, account: nil, phone: nil, email: nil)
     
+
     func didPressSend() {
-        view?.showValidationError()
-        
-        //     interactor?.saveForm(formModel: FormModel)
+        if formModel.isValidForm {
+          //  interactor?.saveForm(formModel: formModel)
+            print("todoOK \(formModel)")
+        } else {
+            view?.showValidationError()
+        }
+       
     }
-    
 }
 
 //Validaciones

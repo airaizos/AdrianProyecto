@@ -57,6 +57,9 @@ extension FormModel {
         validate(field: email, type: .string, minValue: 6, maxValue: 30)
     }
     
+    var isValidForm: Bool {
+        isValidCif && isValidCompanyName && isValidAddress && isValidCountryCheckDigits && isValidBank && isValidBankOffice && isValidAccountCheckDigits && isValidAccount && isValidPhone && isValidEmail
+    }
     
     
     
