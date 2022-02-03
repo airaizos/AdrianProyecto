@@ -6,6 +6,12 @@
   
 */
 
+
+
+
+
+
+//MARK: Form
 "user_form_email_text_field_placeholder" = "Correo Electrónico";
 "user_form_phone_text_field_placeholder" = "Teléfono";
 "user_form_account_text_field_placeholder" = "10 dígitos";

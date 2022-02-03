@@ -35,16 +35,28 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="392" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="K5b-k0-AlS"/>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="VEd-3w-YJ0"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Compay Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8YN-9x-73I">
                                                 <rect key="frame" x="0.0" y="64" width="392" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="next" textContentType="organization"/>
+                                                <connections>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="Htj-yi-9Hv"/>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="l6l-VV-VJR"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZY-Hz-XD3">
                                                 <rect key="frame" x="0.0" y="128" width="392" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="location"/>
+                                                <connections>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="1wa-uM-8un"/>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="zMm-CF-JDH"/>
+                                                </connections>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s3G-5J-kcE">
                                                 <rect key="frame" x="0.0" y="192" width="392" height="34"/>
@@ -53,26 +65,46 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="69.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="I84-WY-PW6"/>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="JTT-0X-ZdQ"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bank" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-lm-efJ">
                                                         <rect key="frame" x="79.5" y="0.0" width="65.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="LaH-NC-GmT"/>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="Oix-l0-s8c"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlH-Xk-CSu">
                                                         <rect key="frame" x="155" y="0.0" width="73" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                        <connections>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="Zio-MO-2Ax"/>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="huS-rX-eST"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2U-OT-eeX">
                                                         <rect key="frame" x="238" y="0.0" width="52.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                        <connections>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="Dww-3Y-1VT"/>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="mLw-bB-8kN"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sjt-cn-JjW">
                                                         <rect key="frame" x="300.5" y="0.0" width="91.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                        <connections>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="OuP-cy-o33"/>
+                                                            <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="Uq5-5d-9PP"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -80,11 +112,19 @@
                                                 <rect key="frame" x="0.0" y="256" width="392" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="YCc-Wx-dJY"/>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="dxi-wp-dzj"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-tR-Yxz">
                                                 <rect key="frame" x="0.0" y="320" width="392" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="ZXH-W8-GDf"/>
+                                                    <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="kEK-nm-gCF"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>

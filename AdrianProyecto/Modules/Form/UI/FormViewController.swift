@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FormViewController: UIViewController {
+class FormViewController: UIViewController, FormViewContract {
     
     var presenter: FormPresenterContract?
     
@@ -83,8 +83,15 @@ class FormViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    //MARK: Actions
+    
+    @IBAction func TextFieldDidChange(_ textField: UITextField) {
+        textFieldDidChange(textField)
+    }
+    
     
     @IBAction func didPressSave(_ sender: UIButton) {
+        
         presenter?.didPressSend()
     }
 }
@@ -93,4 +100,81 @@ extension FormViewController {
     static func createFromStoryboard() -> FormViewController {
         return UIStoryboard(name: "FormViewController", bundle: .main).instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
     }
+    
+    func showValidationError() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Verifica los datos", message: "No puede haber campos vacios", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Entendido", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
+}
+
+
+extension FormViewController {
+    private func didUpdateValidation(input: UITextField, valid: Bool) {
+        DispatchQueue.main.async {
+            
+            input.backgroundColor = valid ? .systemBackground : .systemPink
+        }
+    }
+    
+    private func textFieldDidChange(_ textField: UITextField) {
+        switch textField {
+        case cifTextField: presenter?.didUpdateCif(textField.text)
+        case companyNameTextField: presenter?.didUpdateCompanyName(textField.text)
+        case addressTextField: presenter?.didUpdateCompanyName(textField.text)
+        case countryCheckDigitsTextField: presenter?.didUpdateCountryCheckDigits(textField.text)
+        case bankTextField: presenter?.didUpdateBank(textField.text)
+        case officeTextField: presenter?.didUpdateBankOffice(textField.text)
+        case accountCheckDigitsTextField: presenter?.didUpdateCountryCheckDigits(textField.text)
+        case accountTextField: presenter?.didUpdateAccount(textField.text)
+        case phoneTextField: presenter?.didUpdatePhone(textField.text)
+        case emailTextField: presenter?.didUpdateEmail(textField.text)
+        default:
+            break
+        }
+        
+    }
+    
+    func didValidateCif(_ valid: Bool) {
+        didUpdateValidation(input: cifTextField, valid: valid)
+    }
+    func didValidateCompanyName(_ valid: Bool) {
+        didUpdateValidation(input: companyNameTextField, valid: valid)
+    }
+    func didValidateAddress(_ valid: Bool) {
+        didUpdateValidation(input: addressTextField, valid: valid)
+    }
+    func didValidateCountryCheckDigits(_ valid: Bool) {
+        didUpdateValidation(input: countryCheckDigitsTextField, valid: valid)
+    }
+    func didValidateBank(_ valid: Bool) {
+        didUpdateValidation(input: bankTextField, valid: valid)
+    }
+    func didValidateBankOffice(_ valid: Bool) {
+        didUpdateValidation(input: officeTextField, valid: valid)
+    }
+    func didValidateAccountCheckDigits(_ valid: Bool) {
+        didUpdateValidation(input: accountCheckDigitsTextField, valid: valid)
+    }
+    func didValidateAccount(_ valid: Bool) {
+        didUpdateValidation(input: accountTextField, valid: valid)
+    }
+    func didValidatePhone(_ valid: Bool) {
+        didUpdateValidation(input: phoneTextField, valid: valid)
+    }
+    func didValidateEmail(_ valid: Bool) {
+        didUpdateValidation(input: emailTextField, valid: valid)
+    }
+}
+
+
+extension FormViewController: UITextViewDelegate {
+    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        textFieldDidChange(textField)
+//    }
+  
 }

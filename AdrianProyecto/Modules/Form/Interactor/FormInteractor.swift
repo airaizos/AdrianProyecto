@@ -13,7 +13,7 @@ class FormInteractor: FormInteractorContract {
     
     
     func saveForm(formModel: FormModel) {
-    //    formProvider?.saveForm()
+        formProvider?.saveForm(formModel)
     }
     
 }

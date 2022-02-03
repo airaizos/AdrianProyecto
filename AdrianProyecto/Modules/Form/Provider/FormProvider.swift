@@ -56,7 +56,6 @@ class FormProvider {
                 completion(form)
                 
             } catch {
-                
             }
         }
     }
