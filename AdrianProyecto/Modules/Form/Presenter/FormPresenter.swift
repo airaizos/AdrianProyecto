@@ -61,7 +61,7 @@ extension FormPresenter {
     
     func didUpdateAccountCheckDigits(_ accountCheckDigits: String?) {
         formModel.accountCheckDigits = accountCheckDigits
-        view?.didValidateAccount(formModel.isValidAccountCheckDigits)
+        view?.didValidateAccountCheckDigits(formModel.isValidAccountCheckDigits)
     }
     
     func didUpdateAccount(_ account: String?) {
