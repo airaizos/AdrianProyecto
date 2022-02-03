@@ -12,6 +12,10 @@ class FormControllerBuilder {
     func build() -> UIViewController {
         let viewController = FormViewController.createFromStoryboard()
         
+        let presenter = FormPresenter()
+        presenter.view = viewController
+        viewController.presenter = presenter
+        
         
         return viewController
     }

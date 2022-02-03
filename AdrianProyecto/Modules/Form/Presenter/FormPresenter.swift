@@ -12,16 +12,17 @@ class FormPresenter: FormPresenterContract {
     var view: FormViewContract?
     var interactor: FormInteractorContract?
     
-    private var formModel = FormModel(cif: nil, companyName: nil, address: nil, countryCheckDigits: nil, bank: nil, bankOffice: nil, accountCheckDigits: nil, account: nil, phone: nil, email: nil)
+    private var formModel = FormModel(cif: nil, companyName: nil, address: nil, countryCheckDigits: nil, bank: nil, bankOffice: nil, accountCheckDigits: nil, account: nil, phone: nil, email: nil) {
+        didSet {
+            print(formModel)
+        }
+    }
     
     func didPressSend() {
         view?.showValidationError()
         
         //     interactor?.saveForm(formModel: FormModel)
     }
-    
-    
-    
     
 }
 
@@ -75,7 +76,7 @@ extension FormPresenter {
     
     func didUpdateEmail(_ email: String?) {
         formModel.email = email
-        view?.didValidatePhone(formModel.isValidEmail)
+        view?.didValidateEmail(formModel.isValidEmail)
     }
     
 }

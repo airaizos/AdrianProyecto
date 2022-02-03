@@ -34,7 +34,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CIF" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOd-t5-sM5">
                                                 <rect key="frame" x="0.0" y="0.0" width="392" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                 <connections>
                                                     <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="K5b-k0-AlS"/>
                                                     <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="VEd-3w-YJ0"/>
@@ -61,35 +61,35 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s3G-5J-kcE">
                                                 <rect key="frame" x="0.0" y="192" width="392" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ESXX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nws-hf-p59">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nws-hf-p59">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                         <connections>
                                                             <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="I84-WY-PW6"/>
                                                             <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="JTT-0X-ZdQ"/>
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bank" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-lm-efJ">
-                                                        <rect key="frame" x="79.5" y="0.0" width="65.5" height="34"/>
+                                                        <rect key="frame" x="63.5" y="0.0" width="69" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                         <connections>
                                                             <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="LaH-NC-GmT"/>
                                                             <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="Oix-l0-s8c"/>
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlH-Xk-CSu">
-                                                        <rect key="frame" x="155" y="0.0" width="73" height="34"/>
+                                                        <rect key="frame" x="142.5" y="0.0" width="76.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
                                                         <connections>
                                                             <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="Zio-MO-2Ax"/>
                                                             <action selector="TextFieldDidChange:" destination="Y6W-OH-hqX" eventType="editingChanged" id="huS-rX-eST"/>
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2U-OT-eeX">
-                                                        <rect key="frame" x="238" y="0.0" width="52.5" height="34"/>
+                                                        <rect key="frame" x="229" y="0.0" width="55" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                         <connections>
@@ -98,7 +98,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sjt-cn-JjW">
-                                                        <rect key="frame" x="300.5" y="0.0" width="91.5" height="34"/>
+                                                        <rect key="frame" x="293.5" y="0.0" width="98.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                         <connections>

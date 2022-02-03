@@ -31,7 +31,7 @@ class FormViewController: UIViewController, FormViewContract {
     
     @IBOutlet weak var countryCheckDigitsTextField: UITextField!   {
         didSet {
-            bankTextField.placeholder = NSLocalizedString("user_form_country_check_digits_text_field_placeholder", comment: "")
+            countryCheckDigitsTextField.placeholder = NSLocalizedString("user_form_country_check_digits_text_field_placeholder", comment: "")
         }
     }
     @IBOutlet weak var bankTextField: UITextField!  {
@@ -80,6 +80,7 @@ class FormViewController: UIViewController, FormViewContract {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         // Do any additional setup after loading the view.
     }
@@ -115,8 +116,12 @@ extension FormViewController {
 extension FormViewController {
     private func didUpdateValidation(input: UITextField, valid: Bool) {
         DispatchQueue.main.async {
-            
-            input.backgroundColor = valid ? .systemBackground : .systemPink
+            if valid {
+                input.backgroundColor = .systemBackground
+            } else {
+                input.backgroundColor = .systemRed
+            }
+          //  input.backgroundColor = valid ? .systemBackground : .systemPink
         }
     }
     
@@ -124,11 +129,11 @@ extension FormViewController {
         switch textField {
         case cifTextField: presenter?.didUpdateCif(textField.text)
         case companyNameTextField: presenter?.didUpdateCompanyName(textField.text)
-        case addressTextField: presenter?.didUpdateCompanyName(textField.text)
+        case addressTextField: presenter?.didUpdateAddress(textField.text)
         case countryCheckDigitsTextField: presenter?.didUpdateCountryCheckDigits(textField.text)
         case bankTextField: presenter?.didUpdateBank(textField.text)
         case officeTextField: presenter?.didUpdateBankOffice(textField.text)
-        case accountCheckDigitsTextField: presenter?.didUpdateCountryCheckDigits(textField.text)
+        case accountCheckDigitsTextField: presenter?.didUpdateAccountCheckDigits(textField.text)
         case accountTextField: presenter?.didUpdateAccount(textField.text)
         case phoneTextField: presenter?.didUpdatePhone(textField.text)
         case emailTextField: presenter?.didUpdateEmail(textField.text)
@@ -173,8 +178,24 @@ extension FormViewController {
 
 extension FormViewController: UITextViewDelegate {
     
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        textFieldDidChange(textField)
-//    }
+    private func textFieldDidEndEditing(_ textField: UITextField) {
+        textFieldDidChange(textField)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case cifTextField: companyNameTextField.becomeFirstResponder()
+        case companyNameTextField: addressTextField.becomeFirstResponder()
+        case addressTextField: countryCheckDigitsTextField.becomeFirstResponder()
+        case countryCheckDigitsTextField: bankTextField.becomeFirstResponder()
+        case bankTextField: officeTextField.becomeFirstResponder()
+        case officeTextField: accountCheckDigitsTextField.becomeFirstResponder()
+        case accountCheckDigitsTextField: accountTextField.becomeFirstResponder()
+        case accountTextField: phoneTextField.becomeFirstResponder()
+        case phoneTextField: textField.resignFirstResponder()
+        default: break
+        }
+        return true
+    }
   
 }
