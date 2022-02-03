@@ -112,6 +112,15 @@ extension FormViewController {
             self.present(alert, animated: true)
         }
     }
+    
+    func showValidation() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Datos guardados", message: "Nos pondremos en contacto lo antes posible", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
 }
 
 extension FormViewController {

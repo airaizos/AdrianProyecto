@@ -11,6 +11,7 @@ protocol FormViewContract {
     var presenter: FormPresenterContract? { get set }
     
     func showValidationError()
+    func showValidation()
     
     func didValidateCif(_ valid: Bool)
     func didValidateCompanyName(_ valid: Bool)

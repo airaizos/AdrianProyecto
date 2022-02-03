@@ -18,7 +18,7 @@ class FormPresenter: FormPresenterContract {
     func didPressSend() {
         if formModel.isValidForm {
            interactor?.saveForm(formModel: formModel)
-            
+            view?.showValidation()
         } else {
             view?.showValidationError()
         }
