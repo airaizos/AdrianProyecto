@@ -13,8 +13,12 @@ class FormControllerBuilder {
         let viewController = FormViewController.createFromStoryboard()
         
         let presenter = FormPresenter()
+        let interactor = FormInteractor()
+        
         presenter.view = viewController
         viewController.presenter = presenter
+        interactor.formProvider = FormProvider()
+        presenter.interactor = interactor
         
         
         return viewController

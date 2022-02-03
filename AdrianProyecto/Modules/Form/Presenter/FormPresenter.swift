@@ -17,8 +17,8 @@ class FormPresenter: FormPresenterContract {
 
     func didPressSend() {
         if formModel.isValidForm {
-          //  interactor?.saveForm(formModel: formModel)
-            print("todoOK \(formModel)")
+           interactor?.saveForm(formModel: formModel)
+            
         } else {
             view?.showValidationError()
         }

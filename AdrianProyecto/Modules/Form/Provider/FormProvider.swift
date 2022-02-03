@@ -9,7 +9,7 @@ import Foundation
 //
 
 
-class FormProvider {
+class FormProvider: FormProviderContract {
     
     private let fileManager: FileManager
     private let filename: String
