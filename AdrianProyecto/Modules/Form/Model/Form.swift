@@ -77,7 +77,7 @@ extension FormModel {
     }
     
     var toFormViewModel: FormViewModel {
-        return FormViewModel(savedData: (cif ?? "No data") + (companyName ?? ""))
+        return FormViewModel(savedData: "\(cif ?? "No data") - \(companyName ?? ""), \(phone ?? "")")
     }
 }
 

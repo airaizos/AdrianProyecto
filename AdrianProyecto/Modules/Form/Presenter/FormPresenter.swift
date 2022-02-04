@@ -19,6 +19,8 @@ class FormPresenter: FormPresenterContract {
         if formModel.isValidForm {
            interactor?.saveForm(formModel: formModel)
             view?.showValidation()
+          
+            
         } else {
             view?.showValidationError()
         }
@@ -26,7 +28,6 @@ class FormPresenter: FormPresenterContract {
     
     func viewDidLoad() {
         interactor?.fetchForm()
-        //que ponga el label los datos
         interactor?.output = self
     }
     
