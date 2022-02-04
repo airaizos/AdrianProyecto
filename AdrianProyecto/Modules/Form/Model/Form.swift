@@ -59,14 +59,11 @@ extension FormModel {
     
     var isValidForm: Bool {
         if cif == "Chuck Norris" || isValidCif && isValidCompanyName && isValidAddress && isValidCountryCheckDigits && isValidBank && isValidBankOffice && isValidAccountCheckDigits && isValidAccount && isValidPhone && isValidEmail {
-           return  true
+            return  true
         } else {
             return false
+        }
     }
-    }
-    
-    
-    
     
     func validate(field: String?,type: Type, minValue: Int, maxValue: Int) -> Bool {
         guard let field = field else { return false }
@@ -78,8 +75,12 @@ extension FormModel {
         }
         return !field.isEmpty
     }
+    
+    var toFormViewModel: FormViewModel {
+        return FormViewModel(savedData: (cif ?? "No data") + (companyName ?? ""))
+    }
 }
 
 enum Type {
-    case string, int
+case string, int
 }

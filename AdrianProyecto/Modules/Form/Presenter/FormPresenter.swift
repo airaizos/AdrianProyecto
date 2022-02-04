@@ -22,8 +22,14 @@ class FormPresenter: FormPresenterContract {
         } else {
             view?.showValidationError()
         }
-       
     }
+    
+    func viewDidLoad() {
+        interactor?.fetchForm()
+        //que ponga el label los datos
+        interactor?.output = self
+    }
+    
 }
 
 //Validaciones
@@ -78,5 +84,11 @@ extension FormPresenter {
         formModel.email = email
         view?.didValidateEmail(formModel.isValidEmail)
     }
-    
+}
+
+extension FormPresenter: FormInteractorOutputContract {
+    func didFetch(form: FormModel) {
+        self.formModel = form
+        self.view?.configure(with: form.toFormViewModel)
+    }
 }

@@ -12,6 +12,7 @@ protocol FormViewContract {
     
     func showValidationError()
     func showValidation()
+    func configure(with viewModel: FormViewModel?)
     
     func didValidateCif(_ valid: Bool)
     func didValidateCompanyName(_ valid: Bool)
@@ -29,6 +30,7 @@ protocol FormViewContract {
 protocol FormPresenterContract {
     var view: FormViewContract? { get set }
     
+    func viewDidLoad()
     
     func didPressSend()
     func didUpdateCif(_ cif: String?)
@@ -44,8 +46,9 @@ protocol FormPresenterContract {
 }
 
 protocol FormInteractorContract {
-    
+    var output: FormInteractorOutputContract? { get set }
     func saveForm(formModel: FormModel)
+    func fetchForm()
 }
 
 protocol FormProviderContract {
@@ -54,4 +57,10 @@ protocol FormProviderContract {
     
     func loadForm(_ completion: @escaping (FormModel?) -> ())
     
+}
+
+
+protocol FormInteractorOutputContract: AnyObject {
+    
+    func didFetch(form: FormModel)
 }

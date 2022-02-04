@@ -7,7 +7,18 @@
 
 import UIKit
 
+struct FormViewModel {
+    let savedData: String
+}
+
 class FormViewController: UIViewController, FormViewContract {
+    
+    func configure(with viewModel: FormViewModel?) {
+    guard let viewModel = viewModel else { return }
+        DispatchQueue.main.async {
+        self.loadedDataLabel.text? =  viewModel.savedData
+        }
+}
     
     var presenter: FormPresenterContract?
     
@@ -69,7 +80,8 @@ class FormViewController: UIViewController, FormViewContract {
     
     @IBOutlet weak var saveButtonOutlet: UIButton! {
         didSet {
-            saveButtonOutlet.titleLabel?.text = NSLocalizedString("user_form_save_button_outlet", comment: "")
+            saveButtonOutlet.setTitle(NSLocalizedString("user_form_save_button_outlet", comment: ""), for: .normal)
+            
         }
     }
     @IBOutlet weak var customerFormLabel: UILabel! {
@@ -78,11 +90,12 @@ class FormViewController: UIViewController, FormViewContract {
         }
     }
     
+    @IBOutlet weak var loadedDataLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        // Do any additional setup after loading the view.
+        presenter?.viewDidLoad()
+      
     }
     //MARK: Actions
     
@@ -92,17 +105,19 @@ class FormViewController: UIViewController, FormViewContract {
     
     
     @IBAction func didPressSave(_ sender: UIButton) {
-        
         presenter?.didPressSend()
+        
+        
     }
 
-    
 }
 
 extension FormViewController {
     static func createFromStoryboard() -> FormViewController {
         return UIStoryboard(name: "FormViewController", bundle: .main).instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
     }
+    
+    
     
     func showValidationError() {
         DispatchQueue.main.async {
@@ -121,6 +136,8 @@ extension FormViewController {
             self.present(alert, animated: true)
         }
     }
+    
+   
 }
 
 extension FormViewController {
@@ -145,7 +162,6 @@ extension FormViewController {
         default:
             break
         }
-        
     }
     
     func didValidateCif(_ valid: Bool) {

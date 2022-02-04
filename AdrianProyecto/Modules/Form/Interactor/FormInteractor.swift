@@ -8,6 +8,7 @@
 import Foundation
 
 class FormInteractor: FormInteractorContract {
+    weak var output: FormInteractorOutputContract?
     
     var formProvider: FormProviderContract?
     
@@ -16,5 +17,13 @@ class FormInteractor: FormInteractorContract {
         formProvider?.saveForm(formModel)
         print("todoOK \(formModel)")
     }
+    
+    func fetchForm() {
+        formProvider?.loadForm({ form in
+            guard let form = form else { return }
+            self.output?.didFetch(form: form)
+        })
+    }
+    
     
 }

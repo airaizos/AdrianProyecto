@@ -30,7 +30,7 @@ class MainViewController: UIViewController, MainViewContract {
     
     @IBAction func RandomFact(_ sender: UIButton) {
         
-        //MARK: TODO boton nuego get randomFact, translate
+        //MARK: TODO boton luego get randomFact, translate
     }
 }
 
