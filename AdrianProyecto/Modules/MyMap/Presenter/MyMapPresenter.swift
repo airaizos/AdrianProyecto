@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MyMapPresenter: MyMapPresenterContract {
+class MyMapPresenter {
     
     private var interactor: MyMapInteractorContract?
     
@@ -24,7 +24,7 @@ class MyMapPresenter: MyMapPresenterContract {
     }
 }
 
-extension MyMapPresenter: MyMapInteractorOutputContract {
+extension MyMapPresenter: MyMapInteractorOutputContract, MyMapPresenterContract {
     func didPressPermissionsButton() {
         guard let status = interactor?.currentPermission else { return }
         switch status {

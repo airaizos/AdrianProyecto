@@ -15,13 +15,7 @@ class MyMapControllerBuilder {
        
     
         
-        
-        let interactor = MyMapInteractor()
-        
-        let presenter = MyMapPresenter(interactor: interactor)
-        viewController.presenter = presenter
-        presenter.view = viewController
-
+        viewController.presenter = buildPresenter()
         
         return viewController
     }
@@ -29,3 +23,11 @@ class MyMapControllerBuilder {
 
 
 
+private extension MyMapControllerBuilder {
+    func buildInteractor() -> MyMapInteractorContract{
+        MyMapInteractor()
+    }
+    func buildPresenter() -> MyMapPresenterContract {
+        MyMapPresenter(interactor: buildInteractor())
+    }
+}
