@@ -11,7 +11,7 @@ import UIKit
 class InitialControllerBuilder {
     func build() -> UIViewController {
         let tabBarController = UITabBarController()
-        let viewControllers = [buildForm(),buildListado(),buildMain()]
+        let viewControllers = [buildForm(),buildListado(),buildMain(),buildMap()]
         tabBarController.setViewControllers(viewControllers, animated: true)
         
         return tabBarController
@@ -41,6 +41,17 @@ private extension InitialControllerBuilder {
         let viewController = MainControllerBuilder().build()
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "bolt.fill"), tag: 0)
+      
+        return navigationController
+    }
+}
+
+
+private extension InitialControllerBuilder {
+    func buildMap() -> UINavigationController {
+        let viewController = MyMapControllerBuilder().build()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "mappin.and.ellipse"), tag: 5)
       
         return navigationController
     }

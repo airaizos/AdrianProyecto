@@ -19,5 +19,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Para poder usarlo necesitamos que nos permitas ubicarte en el mapa</string>
 </dict>
 </plist>

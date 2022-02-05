@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Map View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MyMapViewController" id="Y6W-OH-hqX" customClass="MyMapViewController" customModule="AdrianProyecto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-Sb-Dd9">
+                                <rect key="frame" x="10" y="44" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="nzs-Mc-MW6"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-7T-qY2">
+                                <rect key="frame" x="50" y="831" width="314" height="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="WZA-Qv-KRt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Permissions">
+                                    <color key="titleColor" red="1" green="0.89645044939999996" blue="0.1209200126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Permissions" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="1" green="0.89645044939999996" blue="0.1209200126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="PermissionsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eZc-GH-bl4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byw-67-XIs">
+                                <rect key="frame" x="20" y="276" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="byw-67-XIs" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="5bE-Cu-ayJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zYI-7T-qY2" secondAttribute="trailing" constant="50" id="Ff0-7X-yPC"/>
+                            <constraint firstItem="byw-67-XIs" firstAttribute="top" secondItem="ZeK-Sb-Dd9" secondAttribute="bottom" constant="32" id="LkH-Be-VUc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZeK-Sb-Dd9" secondAttribute="trailing" constant="10" id="OQK-Y3-eyx"/>
+                            <constraint firstItem="ZeK-Sb-Dd9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="OpD-4s-K3N"/>
+                            <constraint firstItem="zYI-7T-qY2" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="QBe-h8-gXB"/>
+                            <constraint firstItem="zYI-7T-qY2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="cFy-7b-1st"/>
+                            <constraint firstItem="ZeK-Sb-Dd9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ouz-Zd-cjZ"/>
+                            <constraint firstItem="byw-67-XIs" firstAttribute="centerX" secondItem="ZeK-Sb-Dd9" secondAttribute="centerX" id="xZb-Ya-sSE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyMap" destination="ZeK-Sb-Dd9" id="vGh-wU-BJt"/>
+                        <outlet property="permissionButtonText" destination="zYI-7T-qY2" id="DFf-GC-VKF"/>
+                        <outlet property="permissionLabel" destination="byw-67-XIs" id="71m-86-oQx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
