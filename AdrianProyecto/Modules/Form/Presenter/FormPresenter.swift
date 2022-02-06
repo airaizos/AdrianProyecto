@@ -75,7 +75,6 @@ extension FormPresenter {
 
 extension FormPresenter: FormInteractorOutputContract {
     func didFetch(form: FormModel) {
-        self.formModel = form
         self.view?.configure(with: form.toFormViewModel)
     }
 }

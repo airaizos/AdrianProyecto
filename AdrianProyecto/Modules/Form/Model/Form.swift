@@ -66,7 +66,7 @@ extension FormModel {
         if type == Type.int {
             guard let _ = Int(field) else { return false }
         }
-        if field.count < minValue || field.count > maxValue {
+        if field.count < minValue || field.count > maxValue || field.isEmpty {
             return false
         }
         return !field.isEmpty
