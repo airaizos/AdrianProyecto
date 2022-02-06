@@ -27,12 +27,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="385.5" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-gq-tpN">
-                                                    <rect key="frame" x="5" y="0.0" width="375.5" height="80"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" spacing="220" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-gq-tpN">
+                                                    <rect key="frame" x="10" y="10" width="365.5" height="60"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-Ug-o1M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375.5" height="80"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-Ug-o1M">
+                                                            <rect key="frame" x="0.0" y="0.0" width="365.5" height="60"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <color key="textColor" red="0.31272435189999997" green="0.23671084640000001" blue="0.319627732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -40,10 +40,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Fmg-gq-tpN" secondAttribute="trailing" constant="5" id="3r8-BJ-F7S"/>
-                                                <constraint firstItem="Fmg-gq-tpN" firstAttribute="top" secondItem="2bX-Ta-s5U" secondAttribute="top" id="EyS-71-TSa"/>
-                                                <constraint firstAttribute="bottom" secondItem="Fmg-gq-tpN" secondAttribute="bottom" id="ZTb-fU-G7z"/>
-                                                <constraint firstItem="Fmg-gq-tpN" firstAttribute="leading" secondItem="2bX-Ta-s5U" secondAttribute="leading" constant="5" id="arj-oo-ib3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fmg-gq-tpN" secondAttribute="trailing" constant="10" id="3r8-BJ-F7S"/>
+                                                <constraint firstItem="Fmg-gq-tpN" firstAttribute="top" secondItem="2bX-Ta-s5U" secondAttribute="top" constant="10" id="EyS-71-TSa"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fmg-gq-tpN" secondAttribute="bottom" constant="10" id="ZTb-fU-G7z"/>
+                                                <constraint firstItem="Fmg-gq-tpN" firstAttribute="leading" secondItem="2bX-Ta-s5U" secondAttribute="leading" constant="10" id="arj-oo-ib3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
