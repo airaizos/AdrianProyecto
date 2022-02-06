@@ -20,13 +20,13 @@ protocol MyMapPresenterContract: AnyObject {
     func didPressPermissionsButton()
 }
 
-protocol MyMapInteractorContract {
+protocol MyMapInteractorContract: AnyObject {
     var output: MyMapInteractorOutputContract? { get set }
     var currentPermission: MyMapInteractorStatus { get }
     func askPermission()
 }
 
-protocol MyMapInteractorOutputContract {
+protocol MyMapInteractorOutputContract: AnyObject {
     func didUpdatePermissions(status: MyMapInteractorStatus)
 }
 

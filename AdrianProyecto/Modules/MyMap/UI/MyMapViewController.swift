@@ -36,18 +36,19 @@ extension MyMapViewController: MyMapViewContract {
     
     func setAllowed() {
         DispatchQueue.main.async {
-            self.permissionButtonText.isEnabled = false
+            self.permissionButtonText.isEnabled = true
             self.permissionLabel.text = "Location Allowed"
         }
     }
     
     func setNotAllowed() {
         DispatchQueue.main.async {
-            self.permissionButtonText.isEnabled = false
+            self.permissionButtonText.isEnabled = true
             self.permissionLabel.text = "Location not Allowed"
         }
     }
     
+    //MARK: TODO Boton open settings
     func openSettigns() {
         DispatchQueue.main.async {
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)

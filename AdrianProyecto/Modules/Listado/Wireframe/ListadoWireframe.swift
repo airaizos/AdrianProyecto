@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ListadoWireframe: ListadoWireframeContract {
-    var view: UIViewController?
+   weak var view: UIViewController?
     
     func navigate(to animal: Animal) {
         DispatchQueue.main.async {

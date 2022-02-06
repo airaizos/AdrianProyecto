@@ -15,7 +15,7 @@ class MyMapPresenter {
         self.interactor = interactor
     }
     
-    var view: MyMapViewContract? {
+    weak var view: MyMapViewContract? {
         didSet {
             guard let status = interactor?.currentPermission else { return }
             interactor?.output = self

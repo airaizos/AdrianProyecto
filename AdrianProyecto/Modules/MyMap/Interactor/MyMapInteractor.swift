@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 class MyMapInteractor: NSObject {
-    var output: MyMapInteractorOutputContract?
+   weak var output: MyMapInteractorOutputContract?
     
     private let locationManager: CLLocationManager
     init(locationManager: CLLocationManager = CLLocationManager()) {

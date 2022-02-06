@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FormViewContract {
+protocol FormViewContract: AnyObject {
     var presenter: FormPresenterContract? { get set }
     
     func showValidationError()
@@ -26,7 +26,7 @@ protocol FormViewContract {
     func didValidateEmail(_ valid: Bool)
 }
 
-protocol FormPresenterContract {
+protocol FormPresenterContract: AnyObject {
     var view: FormViewContract? { get set }
     
     func viewDidLoad()
@@ -44,13 +44,13 @@ protocol FormPresenterContract {
     func didUpdateEmail(_ email: String?)
 }
 
-protocol FormInteractorContract {
+protocol FormInteractorContract: AnyObject {
     var output: FormInteractorOutputContract? { get set }
     func saveForm(formModel: FormModel)
     func fetchForm()
 }
 
-protocol FormProviderContract {
+protocol FormProviderContract: AnyObject {
     func saveForm(_ form: FormModel)
     func loadForm(_ completion: @escaping (FormModel?) -> ())
     
