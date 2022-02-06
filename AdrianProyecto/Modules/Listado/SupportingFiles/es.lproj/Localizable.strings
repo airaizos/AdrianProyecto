@@ -7,9 +7,15 @@
 */
 
 
-
-
-
+"listado_detalle_active_time" = "Actividad";
+"listado_detalle_lenght_min" = "Long Min";
+"listado_detalle_lenght_max" = "Long Max";
+"listado_detalle_weight_min" = "Peso Min";
+"listado_detalle_weight_max" = "Peso Max";
+"listado_detalle_lifespan" = "Años vida";
+"listado_detalle_habitat" = "Hábitat";
+"listado_detalle_diet" = "Dieta";
+"listado_detalle_location" = "Ubicación";
 
 //MARK: Form
 "user_form_email_text_field_placeholder" = "Correo Electrónico";

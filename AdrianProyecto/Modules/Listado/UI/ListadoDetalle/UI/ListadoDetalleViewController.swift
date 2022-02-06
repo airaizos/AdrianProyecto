@@ -28,9 +28,62 @@ class ListadoDetalleViewController: UIViewController {
     static func create() -> ListadoDetalleViewController {
         return UIStoryboard(name: "ListadoDetalleViewController", bundle: .main).instantiateViewController(withIdentifier: "ListadoDetalleViewController") as! ListadoDetalleViewController
     }
-
+    
+    @IBOutlet weak var activeTimeL: UILabel! {
+        didSet {
+            activeTimeL.text = NSLocalizedString("listado_detalle_active_time", comment: "")
+        }
+    }
+    @IBOutlet weak var lenghtMinL: UILabel! {
+        didSet {
+            lenghtMinL.text = NSLocalizedString("listado_detalle_lenght_min", comment: "")
+        }
+    }
+    
+    @IBOutlet weak var lenghtMaxL: UILabel! {
+        didSet {
+            lenghtMaxL.text = NSLocalizedString("listado_detalle_lenght_max", comment: "")
+        }
+    }
+    
+    @IBOutlet weak var weightMinL: UILabel! {
+        didSet {
+            weightMinL.text =  NSLocalizedString("listado_detalle_weight_min", comment: "")
+        }
+    }
+    @IBOutlet weak var weightMaxL: UILabel! {
+        didSet {
+            weightMaxL.text = NSLocalizedString("listado_detalle_weight_max", comment: "")
+        }
+    }
+    
+    @IBOutlet weak var lifespanL: UILabel! {
+        didSet {
+            lifespanL.text = NSLocalizedString("listado_detalle_lifespan", comment: "")
+        }
+    }
+    
+    @IBOutlet weak var habitatL: UILabel! {
+        didSet {
+            habitatL.text = NSLocalizedString("listado_detalle_habitat", comment: "")
+        }
+    }
+    
+    
+    @IBOutlet weak var dietL: UILabel! {
+        didSet {
+            dietL.text = NSLocalizedString("listado_detalle_diet", comment: "")
+        }
+    }
+    
+    @IBOutlet weak var locationL: UILabel! {
+        didSet {
+            locationL.text = NSLocalizedString("listado_detalle_location", comment: "")
+        }
+    }
+    
     //MARK: Outlets
-  
+    
     @IBOutlet weak var imageOutlet: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var latinNameLabel: UILabel!
@@ -46,12 +99,12 @@ class ListadoDetalleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            configure(with: viewModel)
+        configure(with: viewModel)
     }
 }
 
 extension ListadoDetalleViewController {
-
+    
     
     func configure(with viewModel: ListadoDetalleViewModel?) {
         guard let viewModel = viewModel else { return }

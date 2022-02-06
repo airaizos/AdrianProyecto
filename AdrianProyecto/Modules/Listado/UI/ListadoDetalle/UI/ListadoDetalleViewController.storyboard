@@ -336,17 +336,26 @@
                     </view>
                     <size key="freeformSize" width="338" height="1071"/>
                     <connections>
+                        <outlet property="activeTimeL" destination="GDE-ft-mQB" id="bc3-Ws-fCz"/>
                         <outlet property="activityTimeLabel" destination="grg-6m-AlV" id="aym-kg-e3T"/>
+                        <outlet property="dietL" destination="Qs8-1R-Lvv" id="mmh-7G-Uwg"/>
                         <outlet property="dietLabel" destination="rNq-9s-Lix" id="LFJ-sT-w4X"/>
                         <outlet property="geoRangeLabel" destination="y6t-kj-kWD" id="j2L-GQ-PZp"/>
+                        <outlet property="habitatL" destination="LOo-f5-eXv" id="JKj-cT-QXY"/>
                         <outlet property="habitatLabel" destination="EHb-rh-LR8" id="QQw-iu-cj4"/>
                         <outlet property="imageOutlet" destination="uyQ-hf-Oae" id="Qwy-yo-BH2"/>
                         <outlet property="latinNameLabel" destination="ktH-zm-CAp" id="Bnl-k1-mKH"/>
+                        <outlet property="lenghtMaxL" destination="Wdw-QU-hYx" id="57l-uS-ZrP"/>
                         <outlet property="lenghtMaxLabel" destination="2OU-Lw-rLm" id="69H-o7-TIP"/>
+                        <outlet property="lenghtMinL" destination="oUC-AI-bMA" id="Kjb-q1-jDn"/>
                         <outlet property="lenghtMinLabel" destination="50G-pV-K2j" id="Ell-sy-Ezv"/>
+                        <outlet property="lifespanL" destination="rpk-cs-X49" id="eyB-nz-uTE"/>
                         <outlet property="lifespanLabel" destination="rIC-hc-pWh" id="db0-E6-dkh"/>
+                        <outlet property="locationL" destination="NSp-5w-O0T" id="ahv-9P-YeI"/>
                         <outlet property="nameLabel" destination="Uve-OO-aFm" id="xRK-oN-Sa1"/>
+                        <outlet property="weightMaxL" destination="PYc-p9-WMs" id="eNS-xy-QKm"/>
                         <outlet property="weightMaxLabel" destination="WMd-tb-oV8" id="Q1l-c8-B9M"/>
+                        <outlet property="weightMinL" destination="0IM-pc-Kn2" id="4wP-fe-QOL"/>
                         <outlet property="weightMinLabel" destination="bwj-ob-YB0" id="Gcw-XK-lJJ"/>
                     </connections>
                 </viewController>
