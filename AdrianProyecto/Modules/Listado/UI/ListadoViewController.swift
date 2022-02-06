@@ -9,10 +9,8 @@ import UIKit
 
 class ListadoViewController: UIViewController, ListadoViewContract, UITableViewDelegate, UITableViewDataSource {
 
-    //MARK: Dependencias
     var presenter: ListadoPresenterContract?
 
-    //MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,8 +19,6 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         tableView.delegate = self
         presenter?.viewDidLoad()
     }
-    
-    //MARK: Métodos
     
     func reloadData() {
         DispatchQueue.main.async {
@@ -42,10 +38,8 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
       
         cell.configure(with: viewModel)
         return cell
-        
     }
 }
-
 
 extension ListadoViewController {
     static func createFromStoryboard() -> ListadoViewController {

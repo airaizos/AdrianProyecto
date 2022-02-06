@@ -14,8 +14,7 @@ struct AnimalViewModel {
 }
 
 class ListadoPresenter: ListadoPresenterContract {
-   
-    //MARK: dependencias
+
     weak var view: ListadoViewContract?
     var interactor: ListadoInteractorContract?
     var wireframe: ListadoWireframeContract?
@@ -48,21 +47,16 @@ class ListadoPresenter: ListadoPresenterContract {
     
     func didSelectItem(at indexPath: IndexPath) {
         let item = animales[indexPath.row]
-        
-        //A donde tiene que ir
+
         wireframe?.navigate(to: item)
-        
     }
 }
 
 extension ListadoPresenter: ListadoInteractorOutputContract {
     func didFetchFail() {
-        
     }
     
-
     func didFetch(animals: [Animal]) {
         self.animales = animals
     }
-    
 }

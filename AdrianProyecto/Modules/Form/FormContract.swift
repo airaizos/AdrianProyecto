@@ -24,7 +24,6 @@ protocol FormViewContract {
     func didValidateAccount(_ valid: Bool)
     func didValidatePhone(_ valid: Bool)
     func didValidateEmail(_ valid: Bool)
-    
 }
 
 protocol FormPresenterContract {
@@ -52,15 +51,11 @@ protocol FormInteractorContract {
 }
 
 protocol FormProviderContract {
-    
     func saveForm(_ form: FormModel)
-    
     func loadForm(_ completion: @escaping (FormModel?) -> ())
     
 }
 
-
 protocol FormInteractorOutputContract: AnyObject {
-    
     func didFetch(form: FormModel)
 }

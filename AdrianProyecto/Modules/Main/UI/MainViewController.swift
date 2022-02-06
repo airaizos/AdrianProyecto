@@ -12,7 +12,6 @@ class MainViewController: UIViewController, MainViewContract {
 
     var presenter: MainPresenterContract?
 
-    
     @IBOutlet weak var factImage: UIImageView!
     @IBOutlet weak var factTitle: UILabel!
     @IBOutlet weak var factLabel: UILabel!

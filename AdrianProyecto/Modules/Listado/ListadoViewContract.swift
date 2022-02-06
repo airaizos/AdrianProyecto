@@ -22,7 +22,6 @@ protocol ListadoPresenterContract: AnyObject {
     
     var numItems: Int { get }
     
-    //MARK: Métodos
     func viewDidLoad()
     func cellViewModel(at indexPath: IndexPath) -> ListadoViewCellModel
     func didSelectItem(at indexPath: IndexPath)

@@ -11,7 +11,6 @@ import UIKit
 protocol MainViewContract: UIViewController {
     var presenter: MainPresenterContract? { get set }
     func configure(with viewModel: FactViewModel)
-   
 }
 
 protocol MainPresenterContract: AnyObject {
@@ -20,7 +19,6 @@ protocol MainPresenterContract: AnyObject {
     var wireframe: MainWireframeContract? { get set }
     
     func viewDidLoad()
-    
 }
 
 protocol MainInteractorContract: AnyObject {

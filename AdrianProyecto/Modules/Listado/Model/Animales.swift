@@ -14,20 +14,18 @@
 import Foundation
 import SwiftUI
 
-
 struct Animal: Codable {
     let name, latinName: String
-
     let activeTime: ActiveTime
     let lengthMin, lengthMax, weightMin, weightMax: String
     let lifespan, habitat, diet, geoRange: String
     let imageLink: String
     let id: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case name
         case latinName = "latin_name"
-
+        
         case activeTime = "active_time"
         case lengthMin = "length_min"
         case lengthMax = "length_max"
@@ -47,23 +45,20 @@ enum ActiveTime: String, Codable {
 
 typealias Animals = [Animal]
 
-
-//MARK: Extensiones del modelo
 extension Animal {
-        var imageURL: URL? {
-            guard let iURL = URL(string: imageLink) else {
-                return  URL(string: "https://upload.wikimedia.org/wikipedia/commons/2/26/T_tetradactyla_1.jpg")}
-            return iURL
-        }
-        //TODO: GUARD LET
-
+    var imageURL: URL? {
+        guard let iURL = URL(string: imageLink) else {
+            return  URL(string: "https://upload.wikimedia.org/wikipedia/commons/2/26/T_tetradactyla_1.jpg")}
+        return iURL
+    }
+    
     var toTableCellViewModel: TableViewCellModel {
-            
+        
         TableViewCellModel(name: name,  geoRange: geoRange, image: imageURL, lenghtMax: lengthMax, weightMax: weightMax, lifespan: lifespan)
-        }
+    }
     
     var toAnimalListCellViewModel: AnimalListCellViewModel {
-      AnimalListCellViewModel(name: name, geoRange: geoRange)
+        AnimalListCellViewModel(name: name, geoRange: geoRange)
     }
     
     var toListadoCellViewModel: ListadoViewCellModel {

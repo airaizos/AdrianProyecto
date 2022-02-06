@@ -14,15 +14,13 @@ struct FormViewModel {
 class FormViewController: UIViewController, FormViewContract {
     
     func configure(with viewModel: FormViewModel?) {
-    guard let viewModel = viewModel else { return }
+        guard let viewModel = viewModel else { return }
         DispatchQueue.main.async {
-        self.loadedDataLabel.text? =  viewModel.savedData
+            self.loadedDataLabel.text? =  viewModel.savedData
         }
-}
+    }
     
     var presenter: FormPresenterContract?
-    
-    //MARK: Oulets
     
     @IBOutlet weak var cifTextField: UITextField!  {
         didSet {
@@ -65,23 +63,19 @@ class FormViewController: UIViewController, FormViewContract {
             accountTextField.placeholder = NSLocalizedString("user_form_account_text_field_placeholder", comment: "")
         }
     }
-    
     @IBOutlet weak var phoneTextField:  UITextField!  {
         didSet {
             phoneTextField.placeholder = NSLocalizedString("user_form_phone_text_field_placeholder", comment: "")
         }
     }
-    
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.placeholder = NSLocalizedString("user_form_email_text_field_placeholder", comment: "")
         }
     }
-    
     @IBOutlet weak var saveButtonOutlet: UIButton! {
         didSet {
             saveButtonOutlet.setTitle(NSLocalizedString("user_form_save_button_outlet", comment: ""), for: .normal)
-            
         }
     }
     @IBOutlet weak var customerFormLabel: UILabel! {
@@ -89,34 +83,26 @@ class FormViewController: UIViewController, FormViewContract {
             customerFormLabel.text = NSLocalizedString("user_form_customer_form_label", comment: "")
         }
     }
-    
     @IBOutlet weak var loadedDataLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-      
     }
-    //MARK: Actions
     
     @IBAction func TextFieldDidChange(_ textField: UITextField) {
         textFieldDidChange(textField)
     }
     
-    
     @IBAction func didPressSave(_ sender: UIButton) {
         presenter?.didPressSend()
-        
     }
-
 }
 
 extension FormViewController {
     static func createFromStoryboard() -> FormViewController {
         return UIStoryboard(name: "FormViewController", bundle: .main).instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
     }
-    
-    
     
     func showValidationError() {
         DispatchQueue.main.async {
@@ -135,14 +121,12 @@ extension FormViewController {
             self.present(alert, animated: true)
         }
     }
-    
-   
 }
 
 extension FormViewController {
     private func didUpdateValidation(input: UITextField, valid: Bool) {
         DispatchQueue.main.async {
-          input.backgroundColor = valid ? .systemBackground : .systemPink
+            input.backgroundColor = valid ? .systemBackground : .systemPink
         }
     }
     

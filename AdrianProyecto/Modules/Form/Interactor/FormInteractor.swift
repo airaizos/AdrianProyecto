@@ -9,9 +9,7 @@ import Foundation
 
 class FormInteractor: FormInteractorContract {
     weak var output: FormInteractorOutputContract?
-    
     var formProvider: FormProviderContract?
-    
     
     func saveForm(formModel: FormModel) {
         formProvider?.saveForm(formModel)
@@ -24,6 +22,4 @@ class FormInteractor: FormInteractorContract {
             self.output?.didFetch(form: form)
         })
     }
-    
-    
 }

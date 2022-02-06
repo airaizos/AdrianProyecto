@@ -19,10 +19,7 @@ struct FormModel: Codable {
     var account: String?
     var phone: String?
     var email: String?
-    
 }
-
-//Validaciones
 
 extension FormModel {
     
@@ -56,7 +53,6 @@ extension FormModel {
     var isValidEmail: Bool {
         validate(field: email, type: .string, minValue: 6, maxValue: 30)
     }
-    
     var isValidForm: Bool {
         if cif == "Chuck Norris" || isValidCif && isValidCompanyName && isValidAddress && isValidCountryCheckDigits && isValidBank && isValidBankOffice && isValidAccountCheckDigits && isValidAccount && isValidPhone && isValidEmail {
             return  true

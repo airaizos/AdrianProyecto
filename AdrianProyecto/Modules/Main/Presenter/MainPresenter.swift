@@ -3,7 +3,6 @@
 //  AdrianProyecto
 //
 //  Created by Adrian Iraizos Mendoza on 30/1/22.
-// MARK: TODO porque se tiene que conformar con MainInteractorOutputContract -> Va como extensión
 
 import Foundation
 
@@ -12,7 +11,7 @@ struct FactViewModel {
     let value: String
 }
 
-class MainPresenter: MainPresenterContract, MainInteractorOutputContract {
+class MainPresenter: MainPresenterContract {
     
     weak var view: MainViewContract?
     var interactor: MainInteractorContract?
@@ -24,13 +23,15 @@ class MainPresenter: MainPresenterContract, MainInteractorOutputContract {
     func viewDidLoad() {
         interactor?.output = self
         interactor?.fetchItems()
-      
     }
+}
+
+extension MainPresenter: MainInteractorOutputContract{
     func didFetch(fact: Fact) {
         self.fact = fact
         view?.configure(with: fact.toMainFactViewModel)
-}
-
+    }
+    
     func didFetchFail() {
         self.fact = Fact(iconURL: URL(string: "error"), value: "error")
     }

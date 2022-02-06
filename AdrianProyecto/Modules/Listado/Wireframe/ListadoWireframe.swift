@@ -18,8 +18,8 @@ class ListadoWireframe: ListadoWireframeContract {
             if let navigationController = self.view?.navigationController {
                 navigationController.pushViewController(viewController, animated: true)
             } else {
-            self.view?.present(viewController, animated: true)
+                self.view?.present(viewController, animated: true)
+            }
         }
-    }
     }
 }
