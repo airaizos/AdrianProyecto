@@ -70,3 +70,6 @@ extension ListadoDetalleViewController {
         geoRangeLabel.text = viewModel.geoRange
     }
 }
+
+
+//50 leading 100 //entre ellas 25
