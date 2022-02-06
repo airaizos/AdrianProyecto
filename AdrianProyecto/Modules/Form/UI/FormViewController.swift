@@ -25,52 +25,72 @@ class FormViewController: UIViewController, FormViewContract {
     @IBOutlet weak var cifTextField: UITextField!  {
         didSet {
             cifTextField.placeholder = NSLocalizedString("user_form_CIF_text_field_placeholder", comment: "")
+            cifTextField.textColor = UIColor(named: "primaryColor")
+            cifTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var companyNameTextField: UITextField! {
         didSet {
             companyNameTextField.placeholder = NSLocalizedString("user_form_company_text_field_placeholder", comment: "")
+            companyNameTextField.textColor = UIColor(named: "primaryColor")
+            companyNameTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var addressTextField: UITextField! {
         didSet {
             addressTextField.placeholder = NSLocalizedString("user_form_address_text_field_placeholder", comment: "")
+            addressTextField.textColor = UIColor(named: "primaryColor")
+            addressTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     
     @IBOutlet weak var countryCheckDigitsTextField: UITextField!   {
         didSet {
             countryCheckDigitsTextField.placeholder = NSLocalizedString("user_form_country_check_digits_text_field_placeholder", comment: "")
+            countryCheckDigitsTextField.textColor = UIColor(named: "primaryColor")
+            countryCheckDigitsTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var bankTextField: UITextField!  {
         didSet {
             bankTextField.placeholder = NSLocalizedString("user_form_bank_text_field_placeholder", comment: "")
+            bankTextField.textColor = UIColor(named: "primaryColor")
+            bankTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var officeTextField: UITextField! {
         didSet {
             officeTextField.placeholder = NSLocalizedString("user_form_ofice_text_field_placeholder", comment: "")
+            officeTextField.textColor = UIColor(named: "primaryColor")
+            officeTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var accountCheckDigitsTextField: UITextField!  {
         didSet {
             accountCheckDigitsTextField.placeholder = NSLocalizedString("user_form_account_check_digits_text_field_placeholder", comment: "")
+            accountCheckDigitsTextField.textColor = UIColor(named: "primaryColor")
+            accountCheckDigitsTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var accountTextField: UITextField! {
         didSet {
             accountTextField.placeholder = NSLocalizedString("user_form_account_text_field_placeholder", comment: "")
+            accountTextField.textColor = UIColor(named: "primaryColor")
+            accountTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var phoneTextField:  UITextField!  {
         didSet {
             phoneTextField.placeholder = NSLocalizedString("user_form_phone_text_field_placeholder", comment: "")
+            phoneTextField.textColor = UIColor(named: "primaryColor")
+            phoneTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.placeholder = NSLocalizedString("user_form_email_text_field_placeholder", comment: "")
+            emailTextField.textColor = UIColor(named: "primaryColor")
+            emailTextField.backgroundColor = UIColor(named: "backgroundSecondary")
         }
     }
     @IBOutlet weak var saveButtonOutlet: UIButton! {
@@ -81,6 +101,8 @@ class FormViewController: UIViewController, FormViewContract {
     @IBOutlet weak var customerFormLabel: UILabel! {
         didSet {
             customerFormLabel.text = NSLocalizedString("user_form_customer_form_label", comment: "")
+            customerFormLabel.textColor = UIColor(named: "textPrimary")
+            customerFormLabel.backgroundColor = UIColor(named: "backgroundPrimary")
         }
     }
     @IBOutlet weak var loadedDataLabel: UILabel!
@@ -88,6 +110,9 @@ class FormViewController: UIViewController, FormViewContract {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        
+        view.backgroundColor = UIColor(named: "backgroundPrimary")
+        loadedDataLabel.textColor = UIColor(named: "textPrimary")
     }
     
     @IBAction func TextFieldDidChange(_ textField: UITextField) {
