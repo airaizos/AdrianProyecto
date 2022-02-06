@@ -86,7 +86,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habitat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LOo-f5-eXv">
-                                                        <rect key="frame" x="0.0" y="169.5" width="90" height="8"/>
+                                                        <rect key="frame" x="0.0" y="169.5" width="90" height="8.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -107,7 +107,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="20" id="adt-i2-RXG">
-                                                <rect key="frame" x="110" y="0.0" width="254" height="234"/>
+                                                <rect key="frame" x="110" y="0.0" width="254" height="234.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="activeTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grg-6m-AlV">
@@ -172,7 +172,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="BCz-P9-Wtl" firstAttribute="top" secondItem="JaN-Df-EQo" secondAttribute="bottom" constant="40" id="2JJ-gV-hVd"/>
-                                    <constraint firstAttribute="bottom" secondItem="uyQ-hf-Oae" secondAttribute="bottom" constant="668" id="3pf-OD-UfC"/>
+                                    <constraint firstAttribute="bottom" secondItem="uyQ-hf-Oae" secondAttribute="bottom" priority="250" constant="700" id="3pf-OD-UfC"/>
                                     <constraint firstItem="uyQ-hf-Oae" firstAttribute="centerX" secondItem="kmq-mB-a7h" secondAttribute="centerX" id="5FP-Ku-Rik"/>
                                     <constraint firstItem="BCz-P9-Wtl" firstAttribute="leading" secondItem="kmq-mB-a7h" secondAttribute="leading" constant="25" id="82s-ge-uTe"/>
                                     <constraint firstAttribute="trailing" secondItem="uyQ-hf-Oae" secondAttribute="trailing" constant="57" id="Dbt-i8-WsO"/>
