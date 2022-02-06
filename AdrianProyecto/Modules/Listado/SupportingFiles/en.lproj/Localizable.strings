@@ -6,7 +6,26 @@
   
 */
 
+"listado_detalle_active_time" = "Active Time";
+"listado_detalle_lenght_min" = "Lenght Min";
+"listado_detalle_lenght_max" = "Lenght Max";
+"listado_detalle_weight_min" = "Weight Min";
+"listado_detalle_weight_max" = "Weight Max";
+"listado_detalle_lifespan" = "Lifespan";
+"listado_detalle_habitat" = "Habitat";
+"listado_detalle_diet" = "Diet";
+"listado_detalle_location" = "Location";
+
+//MARK: Form
 "user_form_email_text_field_placeholder" = "Email";
 "user_form_phone_text_field_placeholder" = "Phone";
-"user_form_account_text_field_placeholder" = "10 digits";
-"user_form_account_check_digits_text_field_placeholder" = "CD";
+"user_form_account_text_field_placeholder" = "XXXXXXXXXX";
+"user_form_account_check_digits_text_field_placeholder" = "XX";
+"user_form_ofice_text_field_placeholder" = "XXXX";
+"user_form_bank_text_field_placeholder" = "XXXX";
+"user_form_country_check_digits_text_field_placeholder" = "XX";
+"user_form_address_text_field_placeholder" = "Address";
+"user_form_company_text_field_placeholder" = "Company Name";
+"user_form_CIF_text_field_placeholder" = "CIF";
+"user_form_save_button_outlet" = "Save";
+"user_form_customer_form_label" = "Contact form";
