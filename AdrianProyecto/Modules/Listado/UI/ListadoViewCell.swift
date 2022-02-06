@@ -52,6 +52,7 @@ class ListadoViewCell: UITableViewCell {
     func configure(with viewModel: ListadoViewCellModel) {
         cellTitle.text = viewModel.title
         cellDetail.text = viewModel.description
+        cellIcon.kf.indicatorType = .activity
         cellIcon.kf.setImage(with: viewModel.icono)
       
     }
