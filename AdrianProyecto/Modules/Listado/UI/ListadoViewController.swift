@@ -18,6 +18,9 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         presenter?.viewDidLoad()
+        
+        tableView.backgroundColor = UIColor(named: "backgroundPrimary")
+        view.backgroundColor = UIColor(named: "backgroundPrimary")
     }
     
     func reloadData() {
@@ -37,8 +40,12 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         }
       
         cell.configure(with: viewModel)
+        cell.backgroundColor = UIColor(named: "backgroundPrimary")
         return cell
     }
+    
+    
+    
 }
 
 extension ListadoViewController {

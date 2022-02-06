@@ -37,6 +37,8 @@ class ListadoViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+    
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,5 +50,9 @@ class ListadoViewCell: UITableViewCell {
         cellDetail.text = viewModel.description
         cellIcon.kf.indicatorType = .activity
         cellIcon.kf.setImage(with: viewModel.icono)
+        
+        cellTitle.textColor = UIColor(named: "textPrimary")
+        cellDetail.textColor = UIColor(named: "textSecondary")
+        
     }
 }

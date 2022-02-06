@@ -97,19 +97,37 @@ class ListadoDetalleViewController: UIViewController {
 extension ListadoDetalleViewController {
     
     func configure(with viewModel: ListadoDetalleViewModel?) {
+        let lenght = " ft"
+        let weight = " lb"
+        let years = " years"
+        
         guard let viewModel = viewModel else { return }
         
         imageOutlet.kf.setImage(with: viewModel.imageURL)
         nameLabel.text = viewModel.name
         latinNameLabel.text = viewModel.latinName
         activityTimeLabel.text = String("\(viewModel.activeTime)")
-        lenghtMinLabel.text = viewModel.lengthMin + " ft"
-        lenghtMaxLabel.text = viewModel.lengthMax + " ft"
-        weightMinLabel.text = viewModel.weightMin + " lb"
-        weightMaxLabel.text = viewModel.weightMax + " lb"
-        lifespanLabel.text = viewModel.lifespan + " years"
+        lenghtMinLabel.text = viewModel.lengthMin + lenght
+        lenghtMaxLabel.text = viewModel.lengthMax + lenght
+        weightMinLabel.text = viewModel.weightMin + weight
+        weightMaxLabel.text = viewModel.weightMax + weight
+        lifespanLabel.text = viewModel.lifespan + years
         habitatLabel.text = viewModel.habitat
         dietLabel.text = viewModel.diet
         geoRangeLabel.text = viewModel.geoRange
+        
+        
+        nameLabel.textColor = UIColor(named: "textPrimary")
+        latinNameLabel.textColor = UIColor(named: "textSecondary")
+        
+        activityTimeLabel.textColor = UIColor(named: "textTertiary")
+        lenghtMinLabel.textColor = UIColor(named: "textSecondary")
+        lenghtMaxLabel.textColor = UIColor(named: "textSecondary")
+        weightMinLabel.textColor = UIColor(named: "textTertiary")
+        weightMaxLabel.textColor = UIColor(named: "textTertiary")
+        lifespanLabel.textColor = UIColor(named: "textSecondary")
+            habitatLabel.textColor = UIColor(named: "textTertiary")
+        dietLabel.textColor = UIColor(named: "textSecondary")
+        geoRangeLabel.textColor = UIColor(named: "textTertiary")
     }
 }

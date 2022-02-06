@@ -20,11 +20,17 @@ class MainViewController: UIViewController, MainViewContract {
     override func viewDidLoad() {
         super.viewDidLoad()
             self.presenter?.viewDidLoad()
+        
+        view.backgroundColor = UIColor(named: "backgroundPrimary")
+        factTitle.textColor = UIColor(named: "textPrimary")
     }
     
     func configure(with viewModel: FactViewModel) {
         factLabel.text = viewModel.value
         factImage.kf.setImage(with: viewModel.iconURL)
+        
+        factLabel.textColor = UIColor(named: "textSecondary")
+        
     }
     
     @IBAction func RandomFact(_ sender: UIButton) {

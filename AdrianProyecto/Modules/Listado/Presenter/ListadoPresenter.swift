@@ -23,7 +23,6 @@ class ListadoPresenter: ListadoPresenterContract {
     private var animales = [Animal]() {
         didSet {
             view?.reloadData()
-            print("animales: \(animales)")
         }
     }
     
