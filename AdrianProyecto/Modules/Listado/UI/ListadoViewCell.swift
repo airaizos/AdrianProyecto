@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 struct TableViewCellModel {
     let name: String
@@ -21,7 +22,7 @@ struct ListadoViewCellModel {
     
     let title: String
     let description: String
-    let icono: String
+    let icono: URL?
 }
 
 struct AnimalListCellViewModel {
@@ -32,8 +33,10 @@ struct AnimalListCellViewModel {
 class ListadoViewCell: UITableViewCell {
     
     @IBOutlet weak var cellTitle: UILabel!
-    @IBOutlet weak var cellDescription: UILabel!
-   @IBOutlet weak var cellIcon: UILabel!
+
+    @IBOutlet weak var cellIcon: UIImageView!
+    
+    @IBOutlet weak var cellDetail: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,6 +51,8 @@ class ListadoViewCell: UITableViewCell {
 
     func configure(with viewModel: ListadoViewCellModel) {
         cellTitle.text = viewModel.title
+        cellDetail.text = viewModel.description
+        cellIcon.kf.setImage(with: viewModel.icono)
       
     }
     

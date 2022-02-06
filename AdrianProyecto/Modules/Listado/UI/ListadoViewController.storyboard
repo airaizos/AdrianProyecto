@@ -27,27 +27,47 @@
                                             <rect key="frame" x="0.0" y="0.0" width="385.5" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" spacing="220" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-gq-tpN">
-                                                    <rect key="frame" x="10" y="10" width="365.5" height="60"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FKv-u3-CFX">
+                                                    <rect key="frame" x="20" y="5" width="60" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="lyO-u9-5mh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="44e-fm-Mzd">
+                                                    <rect key="frame" x="90" y="10" width="285.5" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-Ug-o1M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="365.5" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="285.5" height="48"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <color key="textColor" red="0.31272435189999997" green="0.23671084640000001" blue="0.319627732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbY-0Y-zdg" userLabel="Cell Detail">
+                                                            <rect key="frame" x="0.0" y="48" width="285.5" height="12"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="12" id="I4i-yr-xud"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Fmg-gq-tpN" secondAttribute="trailing" constant="10" id="3r8-BJ-F7S"/>
-                                                <constraint firstItem="Fmg-gq-tpN" firstAttribute="top" secondItem="2bX-Ta-s5U" secondAttribute="top" constant="10" id="EyS-71-TSa"/>
-                                                <constraint firstAttribute="bottom" secondItem="Fmg-gq-tpN" secondAttribute="bottom" constant="10" id="ZTb-fU-G7z"/>
-                                                <constraint firstItem="Fmg-gq-tpN" firstAttribute="leading" secondItem="2bX-Ta-s5U" secondAttribute="leading" constant="10" id="arj-oo-ib3"/>
+                                                <constraint firstAttribute="trailing" secondItem="44e-fm-Mzd" secondAttribute="trailing" constant="10" id="0H5-gA-bC3"/>
+                                                <constraint firstAttribute="bottom" secondItem="FKv-u3-CFX" secondAttribute="bottom" constant="5" id="HVc-Pn-YPV"/>
+                                                <constraint firstItem="44e-fm-Mzd" firstAttribute="leading" secondItem="FKv-u3-CFX" secondAttribute="trailing" constant="10" id="RzU-sK-FzJ"/>
+                                                <constraint firstItem="FKv-u3-CFX" firstAttribute="top" secondItem="2bX-Ta-s5U" secondAttribute="top" constant="5" id="SyQ-cH-kQN"/>
+                                                <constraint firstItem="FKv-u3-CFX" firstAttribute="leading" secondItem="2bX-Ta-s5U" secondAttribute="leading" constant="20" symbolic="YES" id="cJd-S4-a4c"/>
+                                                <constraint firstItem="44e-fm-Mzd" firstAttribute="top" secondItem="2bX-Ta-s5U" secondAttribute="top" constant="10" id="fML-77-Oyh"/>
+                                                <constraint firstAttribute="bottom" secondItem="44e-fm-Mzd" secondAttribute="bottom" constant="10" id="xEq-2f-Z2z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
+                                            <outlet property="cellDetail" destination="QbY-0Y-zdg" id="egc-ZV-yPN"/>
+                                            <outlet property="cellIcon" destination="FKv-u3-CFX" id="FEV-Q1-9Ic"/>
                                             <outlet property="cellTitle" destination="gal-Ug-o1M" id="uu5-bt-oif"/>
                                         </connections>
                                     </tableViewCell>
