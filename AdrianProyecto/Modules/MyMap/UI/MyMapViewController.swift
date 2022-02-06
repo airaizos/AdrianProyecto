@@ -49,7 +49,7 @@ extension MyMapViewController: MyMapViewContract {
     }
     
     //MARK: TODO Boton open settings
-    func openSettigns() {
+    func openSettings() {
         DispatchQueue.main.async {
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
         }

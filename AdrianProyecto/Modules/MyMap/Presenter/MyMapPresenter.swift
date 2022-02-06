@@ -36,7 +36,8 @@ extension MyMapPresenter: MyMapInteractorOutputContract, MyMapPresenterContract 
     func didUpdatePermissions(status: MyMapInteractorStatus) {
         switch status {
         case .allowed: view?.setAllowed()
-        case .denied, .unknown: view?.setNotAllowed()
+        case .denied: view?.openSettings()
+        case .unknown: view?.setNotAllowed()
         }
     }
 }

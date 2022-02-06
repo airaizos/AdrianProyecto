@@ -12,7 +12,7 @@ protocol MyMapViewContract: UIViewController {
     
     func setAllowed()
     func setNotAllowed()
-    func openSettigns()
+    func openSettings()
 }
 
 protocol MyMapPresenterContract: AnyObject {
