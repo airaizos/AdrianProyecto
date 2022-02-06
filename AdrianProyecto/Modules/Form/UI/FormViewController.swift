@@ -111,8 +111,7 @@ class FormViewController: UIViewController, FormViewContract {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         
-        view.backgroundColor = UIColor(named: "backgroundPrimary")
-        loadedDataLabel.textColor = UIColor(named: "textPrimary")
+        initialConfiguration()
     }
     
     @IBAction func TextFieldDidChange(_ textField: UITextField) {
@@ -123,6 +122,10 @@ class FormViewController: UIViewController, FormViewContract {
         presenter?.didPressSend()
     }
     
+    
+   @objc private func hideKeyboard() {
+        self.view.endEditing(true)
+    }
 }
 
 extension FormViewController {
@@ -147,7 +150,11 @@ extension FormViewController {
             self.present(alert, animated: true)
         }
     }
-
+    private func initialConfiguration(){
+        view.backgroundColor = UIColor(named: "backgroundPrimary")
+        loadedDataLabel.textColor = UIColor(named: "textPrimary")
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+    }
     
 }
 
