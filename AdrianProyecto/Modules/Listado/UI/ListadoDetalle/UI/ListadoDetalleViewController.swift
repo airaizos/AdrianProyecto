@@ -60,11 +60,11 @@ extension ListadoDetalleViewController {
         nameLabel.text = viewModel.name
         latinNameLabel.text = viewModel.latinName
         activityTimeLabel.text = String("\(viewModel.activeTime)")
-        lenghtMinLabel.text = viewModel.lengthMin
-        lenghtMaxLabel.text = viewModel.lengthMax
-        weightMinLabel.text = viewModel.weightMin
-        weightMaxLabel.text = viewModel.weightMax
-        lifespanLabel.text = viewModel.lifespan
+        lenghtMinLabel.text = viewModel.lengthMin + " ft"
+        lenghtMaxLabel.text = viewModel.lengthMax + " ft"
+        weightMinLabel.text = viewModel.weightMin + " lb"
+        weightMaxLabel.text = viewModel.weightMax + " lb"
+        lifespanLabel.text = viewModel.lifespan + " years"
         habitatLabel.text = viewModel.habitat
         dietLabel.text = viewModel.diet
         geoRangeLabel.text = viewModel.geoRange
