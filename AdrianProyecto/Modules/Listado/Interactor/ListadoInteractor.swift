@@ -21,20 +21,3 @@ class ListadoInteractor: ListadoInteractorContract {
         })
     }
 }
-
-/*
- [Animal(
-    name: "Chuck Norris",
-    latinName: "Carlos Ray Norris",
-    activeTime: ActiveTime.chuckNorris,
-    lengthMin: "length Max",
-    lengthMax: "∞",
-    weightMin: "weight Max",
-    weightMax: "∞",
-    lifespan: "Inmortal",
-    habitat: "everywhere",
-    diet: "",
-    geoRange: "",
-    imageLink: "", id: 0)])
- 
- */
