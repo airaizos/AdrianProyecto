@@ -15,7 +15,11 @@ class MainViewController: UIViewController, MainViewContract {
     @IBOutlet weak var factImage: UIImageView!
     @IBOutlet weak var factTitle: UILabel!
     @IBOutlet weak var factLabel: UILabel!
-    @IBOutlet weak var RandomFact: UIButton!
+    @IBOutlet weak var RandomFact: UIButton! {
+        didSet {
+            RandomFact.setTitle(NSLocalizedString("main_random_fact_button_outlet", comment: ""), for: .normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,7 @@ class MainViewController: UIViewController, MainViewContract {
     
     @IBAction func RandomFact(_ sender: UIButton) {
         
-        //MARK: TODO boton luego get randomFact, translate
+        presenter?.didPressRandomFact()
     }
 }
 

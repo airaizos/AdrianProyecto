@@ -6,6 +6,12 @@
   
 */
 
+
+
+//MARK: Main
+"main_random_fact_button_outlet" = "Random";
+
+//MARK: Listado Detalle
 "listado_detalle_active_time" = "Active Time";
 "listado_detalle_lenght_min" = "Lenght Min";
 "listado_detalle_lenght_max" = "Lenght Max";
@@ -29,3 +35,9 @@
 "user_form_CIF_text_field_placeholder" = "CIF";
 "user_form_save_button_outlet" = "Save";
 "user_form_customer_form_label" = "Contact form";
+
+
+//MARK: My Map
+"my_map_permission_label_allowed" = "Location Allowed";
+"my_map_permission_label_not_allowed" = "Location not Allowed";
+"my_map_permission_button_text" = "Authorize location";

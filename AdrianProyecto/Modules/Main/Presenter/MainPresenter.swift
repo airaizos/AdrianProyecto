@@ -24,6 +24,12 @@ class MainPresenter: MainPresenterContract {
         interactor?.output = self
         interactor?.fetchItems()
     }
+    
+    func didPressRandomFact() {
+        
+        interactor?.output = self
+        interactor?.fetchItems()
+    }
 }
 
 extension MainPresenter: MainInteractorOutputContract{

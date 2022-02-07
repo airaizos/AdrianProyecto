@@ -15,7 +15,13 @@ class MyMapViewController: UIViewController {
     @IBOutlet weak var MyMap: MKMapView!
     
     @IBOutlet weak var permissionLabel: UILabel!
-    @IBOutlet weak var permissionButtonText: UIButton!
+    
+    @IBOutlet weak var permissionButtonText: UIButton! {
+        didSet {
+            permissionButtonText.setTitle(NSLocalizedString("my_map_permission_button_text", comment: ""), for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.view = self
@@ -37,18 +43,17 @@ extension MyMapViewController: MyMapViewContract {
     func setAllowed() {
         DispatchQueue.main.async {
             self.permissionButtonText.isEnabled = true
-            self.permissionLabel.text = "Location Allowed"
-        }
-    }
+            self.permissionLabel.text = NSLocalizedString("my_map_permission_label_allowed", comment: "")
+                }
+            }
     
     func setNotAllowed() {
         DispatchQueue.main.async {
             self.permissionButtonText.isEnabled = true
-            self.permissionLabel.text = "Location not Allowed"
+            self.permissionLabel.text = NSLocalizedString("my_map_permission_label_not_allowed", comment: "")
         }
     }
     
-    //MARK: TODO Boton open settings
     func openSettings() {
         DispatchQueue.main.async {
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)

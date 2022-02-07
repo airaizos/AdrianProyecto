@@ -19,6 +19,7 @@ protocol MainPresenterContract: AnyObject {
     var wireframe: MainWireframeContract? { get set }
     
     func viewDidLoad()
+    func didPressRandomFact()
 }
 
 protocol MainInteractorContract: AnyObject {
