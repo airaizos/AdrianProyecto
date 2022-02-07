@@ -25,4 +25,3 @@ class NetworkListadoProvider: ListadoProviderContract {
         }.validate()
     }
 }
-

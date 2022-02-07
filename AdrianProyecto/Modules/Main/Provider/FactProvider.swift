@@ -8,8 +8,6 @@
 import Foundation
 import Alamofire
 
-//MARK: TODO no da error si url erronea
-
 class FactProviderFromAPI: MainProviderContract {
   
     func getMainFact(_ completion: @escaping (Result<Fact, ProviderError>) -> ()) {

@@ -25,6 +25,7 @@ protocol ListadoPresenterContract: AnyObject {
     func viewDidLoad()
     func cellViewModel(at indexPath: IndexPath) -> ListadoViewCellModel
     func didSelectItem(at indexPath: IndexPath)
+    func didPressGetMoreButton()
 }
 
 protocol ListadoInteractorContract: AnyObject {

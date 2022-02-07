@@ -49,6 +49,11 @@ class ListadoPresenter: ListadoPresenterContract {
 
         wireframe?.navigate(to: item)
     }
+    
+    func didPressGetMoreButton() {
+        interactor?.output = self
+        interactor?.fetchItems()
+    }
 }
 
 extension ListadoPresenter: ListadoInteractorOutputContract {

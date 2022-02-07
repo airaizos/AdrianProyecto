@@ -13,6 +13,12 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var randomAnimalsButton: UIButton! {
+        didSet {
+            randomAnimalsButton.setTitle(NSLocalizedString("listado_random_animals_button",comment: ""), for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -42,6 +48,10 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         cell.configure(with: viewModel)
         cell.backgroundColor = UIColor(named: "backgroundPrimary")
         return cell
+    }
+    @IBAction func getMore(_ sender: UIButton) {
+        presenter?.didPressGetMoreButton()
+        
     }
     
     

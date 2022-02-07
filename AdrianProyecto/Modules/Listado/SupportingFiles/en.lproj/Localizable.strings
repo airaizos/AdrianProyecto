@@ -11,6 +11,9 @@
 //MARK: Main
 "main_random_fact_button_outlet" = "Random";
 
+//MARK: Listado
+"listado_random_animals_button" = "Get More";
+
 //MARK: Listado Detalle
 "listado_detalle_active_time" = "Active Time";
 "listado_detalle_lenght_min" = "Lenght Min";
