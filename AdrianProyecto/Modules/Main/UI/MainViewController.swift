@@ -38,7 +38,6 @@ class MainViewController: UIViewController, MainViewContract {
     }
     
     @IBAction func RandomFact(_ sender: UIButton) {
-        
         presenter?.didPressRandomFact()
     }
 }

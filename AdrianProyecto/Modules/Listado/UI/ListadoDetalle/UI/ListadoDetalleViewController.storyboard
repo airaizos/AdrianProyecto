@@ -65,10 +65,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="activeTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grg-6m-AlV">
-                                                                <rect key="frame" x="100" y="0.0" width="95.5" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="95.5" id="92E-oC-ltJ"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="100" y="0.0" width="93.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" systemColor="systemGreenColor"/>
                                                                 <nil key="highlightedColor"/>

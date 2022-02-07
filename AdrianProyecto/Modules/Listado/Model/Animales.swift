@@ -41,6 +41,7 @@ struct Animal: Codable {
 enum ActiveTime: String, Codable {
     case diurnal = "Diurnal"
     case nocturnal = "Nocturnal"
+    case always = "ChuckNorris"
     case error = "Error"
 }
 
