@@ -51,7 +51,12 @@ class ListadoPresenter: ListadoPresenterContract {
     }
     
     func didPressGetMoreButton() {
-        interactor?.fetchItems()
+        //Manejo de memoria
+        //    interactor?.fetchItems()
+    }
+    
+    deinit {
+        
     }
 }
 
@@ -62,7 +67,11 @@ extension ListadoPresenter: ListadoInteractorOutputContract {
     
     func didFetch(animals: [Animal]) {
         animales.append(contentsOf: animals)
-        animales.append(chuckNorris)
+        if (animales.firstIndex(where: { $0.name == "Chuck Norris"}) != nil) {
+            
+        } else {
+            animales.append(chuckNorris)
+        }
     }
     
 }

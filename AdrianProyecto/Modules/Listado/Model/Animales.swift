@@ -3,13 +3,6 @@
 //  AnimalesDelMundo
 //
 //  Created by Adrian Iraizos Mendoza on 21/1/22.
-// Hasta 10 animales random
-// https://zoo-animal-api.herokuapp.com/animals/rand/10
-// un animal random
-// https://zoo-animal-api.herokuapp.com/animals/rand
-
-//lenght: ft
-//weight: punds
 
 import Foundation
 import SwiftUI
@@ -50,7 +43,7 @@ typealias Animals = [Animal]
 extension Animal {
     var imageURL: URL? {
         guard let iURL = URL(string: imageLink) else {
-            return  URL(string: "https://upload.wikimedia.org/wikipedia/commons/2/26/T_tetradactyla_1.jpg")}
+            return  URL(string: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Chuck_Norris%2C_The_Delta_Force_1986.jpg")}
         return iURL
     }
     

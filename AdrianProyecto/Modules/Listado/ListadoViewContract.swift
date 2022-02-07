@@ -12,7 +12,6 @@ protocol ListadoViewContract: UIViewController {
     var presenter: ListadoPresenterContract? { get set }
     
     func reloadData()
-//    func configure(with viewModel: AnimalViewModel)
 }
 
 protocol ListadoPresenterContract: AnyObject {

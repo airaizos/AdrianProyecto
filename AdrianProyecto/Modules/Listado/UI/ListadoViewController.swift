@@ -27,6 +27,8 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         
         tableView.backgroundColor = UIColor(named: "backgroundPrimary")
         view.backgroundColor = UIColor(named: "backgroundPrimary")
+        
+        
     }
     
     func reloadData() {
@@ -53,9 +55,9 @@ class ListadoViewController: UIViewController, ListadoViewContract, UITableViewD
         presenter?.didPressGetMoreButton()
         
     }
-    
-    
-    
+    deinit {
+        
+    }
 }
 
 extension ListadoViewController {
