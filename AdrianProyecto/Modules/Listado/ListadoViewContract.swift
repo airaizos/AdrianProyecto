@@ -34,7 +34,7 @@ protocol ListadoInteractorContract: AnyObject {
 
 protocol ListadoInteractorOutputContract: AnyObject {
     func didFetch(animals: [Animal])
-    func didFetchFail()
+    func didFetchFail(animals: [Animal])
 }
 
 protocol ListadoWireframeContract: AnyObject {

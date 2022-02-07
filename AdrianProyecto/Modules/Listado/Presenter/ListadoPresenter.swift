@@ -52,7 +52,8 @@ class ListadoPresenter: ListadoPresenterContract {
 }
 
 extension ListadoPresenter: ListadoInteractorOutputContract {
-    func didFetchFail() {
+    func didFetchFail(animals: [Animal]) {
+        self.animales = animals
     }
     
     func didFetch(animals: [Animal]) {

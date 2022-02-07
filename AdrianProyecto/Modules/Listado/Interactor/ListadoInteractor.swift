@@ -16,7 +16,7 @@ class ListadoInteractor: ListadoInteractorContract {
         animalesProvider?.getAnimalListado({ result in
             switch result {
             case .success(let animales): self.output?.didFetch(animals: animales)
-            case .failure: self.output?.didFetchFail()
+            case .failure(let error): self.output?.didFetchFail(animals: [Animal(name: "\(error.localizedDescription)", latinName: "", activeTime: ActiveTime.error, lengthMin: "", lengthMax: "", weightMin: "", weightMax: "", lifespan: "", habitat: "", diet: "", geoRange: "", imageLink: "", id: 0)])
             }
         })
     }
