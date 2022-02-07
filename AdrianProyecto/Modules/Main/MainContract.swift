@@ -33,7 +33,7 @@ protocol MainWireframeContract: AnyObject {
 
 protocol MainInteractorOutputContract: AnyObject {
     func didFetch(fact: Fact)
-    func didFetchFail()
+    func didFetchFail(fact: Fact)
 }
 
 protocol MainProviderContract: AnyObject {

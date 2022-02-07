@@ -16,8 +16,7 @@ class MainInteractor: MainInteractorContract {
         mainProvider?.getMainFact({ result in
             switch result {
             case .success(let fact): self.output?.didFetch(fact: fact)
-            case .failure: self.output?.didFetchFail()
-                //MARK: TODO mensaje de error cuando falla
+            case .failure(let error): self.output?.didFetchFail(fact: Fact(iconURL: URL(string: "error"), value: error.localizedDescription))
             }
         })
     }

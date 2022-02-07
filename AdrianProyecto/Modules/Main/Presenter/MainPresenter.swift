@@ -18,7 +18,7 @@ class MainPresenter: MainPresenterContract {
     var wireframe: MainWireframeContract?
     var fetchFacts: MainProviderContract?
     
-    var fact:Fact = Fact(iconURL: URL(string: "https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png"), value: "Init vacio")
+    var fact:Fact  = Fact(iconURL: URL(string: "error"), value: "error")
     
     func viewDidLoad() {
         interactor?.output = self
@@ -38,7 +38,8 @@ extension MainPresenter: MainInteractorOutputContract{
         view?.configure(with: fact.toMainFactViewModel)
     }
     
-    func didFetchFail() {
-        self.fact = Fact(iconURL: URL(string: "error"), value: "error")
+    func didFetchFail(fact: Fact) {
+        self.fact = Fact(iconURL: URL(string: "error"), value: "\(fact.value)")
+        view?.configure(with: fact.toMainFactViewModel)
     }
 }
