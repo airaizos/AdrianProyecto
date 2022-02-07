@@ -51,7 +51,7 @@ class ListadoPresenter: ListadoPresenterContract {
     }
     
     func didPressGetMoreButton() {
-        didGetMore()
+        interactor?.fetchItems()
     }
 }
 
@@ -61,10 +61,12 @@ extension ListadoPresenter: ListadoInteractorOutputContract {
     }
     
     func didFetch(animals: [Animal]) {
-        self.animales = animals
+        animales.append(contentsOf: animals)
+        animales.append(chuckNorris)
     }
     
-    func didGetMore() {
-        
-    }
 }
+
+
+
+

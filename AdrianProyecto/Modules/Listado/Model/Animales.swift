@@ -71,3 +71,18 @@ extension Animal {
         ListadoDetalleViewModel(imageLink: imageLink, name: name, latinName: latinName, activeTime: activeTime, lengthMin: lengthMin, lengthMax: lengthMax, weightMin: weightMin, weightMax: weightMax, lifespan: lifespan, habitat: habitat, diet: diet, geoRange: geoRange)
     }
 }
+
+
+let chuckNorris = Animal(
+    name: "Chuck Norris",
+    latinName: "Carlos Ray Norris",
+    activeTime: ActiveTime.always,
+    lengthMin: "∞",
+    lengthMax: "∞",
+    weightMin: "∞",
+    weightMax: "∞",
+    lifespan: "Inmortal",
+    habitat: "everywhere",
+    diet: "superheroes, villians, planets, galaxies...",
+    geoRange: "Universe",
+    imageLink: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Chuck_Norris%2C_The_Delta_Force_1986.jpg", id: 0)
